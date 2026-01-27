@@ -110,3 +110,124 @@ body {
     height: 1px;
     overflow: hidden;
 }
+
+/* Layout alignment */
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    background: #0b0f14;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 50;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    gap: 14px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.82);
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.nav a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.nav a.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+/* Hero banner */
+.hero {
+    padding: 46px 0 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: radial-gradient(80% 140% at 10% 0%, rgba(0, 225, 255, 0.10) 0%, rgba(0, 0, 0, 0) 55%),
+        radial-gradient(70% 120% at 90% 0%, rgba(157, 78, 255, 0.10) 0%, rgba(0, 0, 0, 0) 55%);
+}
+
+.hero-inner {
+    display: grid;
+    gap: 10px;
+}
+
+.hero-title {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.hero-subtitle {
+    margin: 0;
+    max-width: 70ch;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.10);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.button.secondary {
+    background: transparent;
+}
+
+/* Main content spacing */
+.content {
+    padding: 26px 0 46px;
+}
+
+.content section {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.content section:last-of-type {
+    border-bottom: none;
+}
+
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 18px 0;
+    color: rgba(255, 255, 255, 0.70);
+}
