@@ -32,24 +32,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/anchorpoint-it.css">
 
-    <header class="ap-section--tech" style="padding:18px 0;">
-        <div
-            style="max-width:1100px;margin:0 auto;padding:0 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
-            <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-                <img class="ap-logo" src="/assets/logo-256.png" alt="Anchorpoint IT logo">
-                <div>
-                    <div class="ap-h1" style="font-size:18px;margin:0;color:var(--ap-navy);">Anchorpoint IT</div>
-                    <div class="ap-subhead" style="font-size:12.5px;">Grounded IT for Growing Organizations</div>
+    <header class="ap-header">
+        <div class="ap-header-inner">
+
+            <!-- Brand -->
+            <a href="/" class="ap-brand">
+                <img src="/assets/mark-128.png" alt="Anchorpoint IT" class="ap-mark">
+                <div class="ap-brand-text">
+                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
                 </div>
             </a>
 
-            <nav style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                <a class="ap-btn ap-btn--ghost" href="#services">Services</a>
-                <a class="ap-btn ap-btn--ghost" href="#about">About</a>
+            <!-- Navigation -->
+            <nav class="ap-nav">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
                 <a class="ap-btn ap-btn--primary" href="#contact">Book a consult</a>
             </nav>
+
         </div>
     </header>
+
     <main class="wrap">
         <section class="card" aria-label="AnchorPoint IT feature">
             <img class="hero" src="/assets/anchorpoint-feature.png"
