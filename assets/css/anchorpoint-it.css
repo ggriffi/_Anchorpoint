@@ -169,3 +169,76 @@ body {
 .ap-nav a:not(.ap-btn):hover {
   color: #ffffff;
 }
+
+/* Page layout (matches existing aesthetic) */
+.ap-page {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.ap-surface {
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.ap-hero {
+  padding: 34px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(1200px 600px at 30% 10%, rgba(43, 176, 166, 0.14), transparent 55%),
+    radial-gradient(900px 500px at 80% 20%, rgba(11, 58, 90, 0.22), transparent 60%);
+}
+
+.ap-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.15;
+}
+
+.ap-hero p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.ap-hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.ap-content {
+  padding: 18px 22px 22px;
+}
+
+.ap-content section {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ap-content section:last-child {
+  border-bottom: none;
+}
+
+.ap-content h2 {
+  margin: 0 0 10px;
+}
+
+.ap-content ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.ap-footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 12px 0 6px;
+}
