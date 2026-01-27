@@ -102,3 +102,11 @@ body {
     color: var(--muted);
     padding: 8px 0 4px;
 }
+
+.seo {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
