@@ -97,17 +97,23 @@
 
 <body>
     <main class="page">
-        <header class="pageHeader">
-            <h1>Services</h1>
-            <p>Reliable, secure, and scalable IT—built to support growing organizations.</p>
+        <header class="ap-header">
+            <div class="ap-header-inner">
+                <a href="/index.html" class="ap-brand">
+                    <img src="/assets/logo-1024.png" alt="Anchorpoint IT" class="ap-mark">
+                    <div class="ap-brand-text">
+                        <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                        <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+                    </div>
+                </a>
 
-            <div class="actions">
-                <!-- Update href to your real consult link (Calendly, form, mailto, etc.) -->
-                <a class="btn btnPrimary btnPrimary" href="/contact.html">Request a consult</a>
-                <a class="btn btnSecondary btnSecondary" href="/index.html">Back to Home</a>
+                <nav class="ap-nav">
+                    <a href="/services.html" aria-current="page">Services</a>
+                    <a href="/about.html">About</a>
+                    <a class="ap-btn ap-btn--primary" href="/index.html#contact">Book a consult</a>
+                </nav>
             </div>
         </header>
-
         <section class="posterWrap" aria-label="Services overview">
             <!-- If the file is in /assets/ change src to /assets/services.png -->
             <img class="poster" src="/assets/services.png" alt="AnchorPoint IT services overview" loading="eager" />
