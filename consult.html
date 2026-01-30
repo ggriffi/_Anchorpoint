@@ -1,0 +1,46 @@
+<form method="post" action="/api/lead" class="ap-form">
+    <label>
+        <span>Name *</span>
+        <input name="name" required autocomplete="name">
+    </label>
+
+    <label>
+        <span>Email *</span>
+        <input type="email" name="email" required autocomplete="email">
+    </label>
+
+    <label>
+        <span>Phone</span>
+        <input name="phone" autocomplete="tel">
+    </label>
+
+    <label>
+        <span>Company / Organization</span>
+        <input name="org" autocomplete="organization">
+    </label>
+
+    <label>
+        <span>What can I help with? *</span>
+        <select name="service" required>
+            <option value="" selected disabled>Select one</option>
+            <option>Network / Wi-Fi reliability</option>
+            <option>Firewall / VLAN segmentation</option>
+            <option>Security hardening</option>
+            <option>New setup / rebuild</option>
+            <option>Ongoing support</option>
+            <option>Other</option>
+        </select>
+    </label>
+
+    <label>
+        <span>Brief description *</span>
+        <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <!-- Turnstile widget (Step 3) -->
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAACV1WwE9kUwzIFMg"></div>
+
+    <button class="ap-btn ap-btn--primary" type="submit">Submit</button>
+</form>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
