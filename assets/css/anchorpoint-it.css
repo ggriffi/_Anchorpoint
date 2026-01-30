@@ -242,3 +242,37 @@ body {
   color: var(--muted);
   padding: 12px 0 6px;
 }
+
+
+/* Fix list text visibility */
+.seo ul,
+.seo ol,
+.card ul,
+.card ol,
+main ul,
+main ol {
+  color: var(--text, rgba(255, 255, 255, .92));
+}
+
+.seo li,
+.card li,
+main li {
+  color: inherit;
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Ensure bullets show up */
+.seo ul,
+.card ul,
+main ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+
+.seo ol,
+.card ol,
+main ol {
+  list-style: decimal;
+  padding-left: 1.2em;
+}
