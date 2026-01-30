@@ -7,6 +7,52 @@
     <title>About | AnchorPoint IT</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/assets/css/anchorpoint-it.css">
+    <style>
+        /* Editorial Side-by-Side Adjustment */
+        .editorial-container {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            min-height: 500px;
+            /* Adjust based on preference */
+        }
+
+        .editorial-image {
+            flex: 1;
+            max-width: 45%;
+            /* Limits image to less than half the card width */
+            overflow: hidden;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Crops the image to fit the container precisely */
+            display: block;
+        }
+
+        .editorial-text {
+            flex: 1.2;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Mobile Responsive: Stack them on top of each other on small screens */
+        @media (max-width: 768px) {
+            .editorial-container {
+                flex-direction: column;
+            }
+
+            .editorial-image {
+                max-width: 100%;
+                height: 300px;
+                /* Fixed height for mobile banner */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -29,41 +75,34 @@
 
     <main class="wrap">
         <article class="card" aria-label="About AnchorPoint IT">
-            <img class="hero" src="/assets/about-feature.png"
-                alt="Geoff Griffith - G Cloud Solutions & AnchorPoint IT" />
+            <div class="editorial-container">
+                <div class="editorial-image">
+                    <img src="/assets/about-feature.png" alt="Network Engineering Infrastructure" />
+                </div>
 
-            <div class="ap-content">
-                <section>
-                    <h1>Grounded IT for Growing Organizations</h1>
-                    <p>
-                        Led by <strong>Geoff Griffith</strong>, a Network Engineer with a focus on infrastructure and
-                        security, AnchorPoint IT was built to provide clarity in a world of technical complexity.
-                        We serve small businesses, nonprofits, and churches in Leavenworth, KS, ensuring their digital
-                        foundations are rock solid.
-                    </p>
-                </section>
+                <div class="editorial-text">
+                    <div class="ap-content">
+                        <h1>About AnchorPoint IT</h1>
+                        <p>
+                            Led by <strong>Geoff Griffith</strong>, a Network Engineer focusing on infrastructure and
+                            security, AnchorPoint IT provides grounded, reliable technology solutions for small
+                            businesses, nonprofits, and churches.
+                        </p>
 
-                <section>
-                    <h2>How we work</h2>
-                    <p>Our approach is simple: build stable systems, keep them secure, and make them easy to manage.</p>
-                    <ul>
-                        <li><strong>Listen & Audit:</strong> We identify your bottlenecks and risks before proposing
-                            solutions.</li>
-                        <li><strong>Simplify:</strong> We replace "band-aid" fixes with reliable, long-term
-                            infrastructure.</li>
-                        <li><strong>Secure by Default:</strong> Security is baked into the foundation of everything we
-                            build.</li>
-                    </ul>
-                </section>
-            </div>
+                        <h2>How we work</h2>
+                        <ul style="padding-left: 20px;">
+                            <li><strong>Listen & Audit:</strong> Identifying bottlenecks and risks before proposing
+                                solutions.</li>
+                            <li><strong>Simplify:</strong> Replacing "band-aid" fixes with reliable infrastructure.</li>
+                            <li><strong>Secure by Default:</strong> Baking security into the foundation of every build.
+                            </li>
+                        </ul>
 
-            <div class="actions">
-                <a class="btn primary" href="mailto:contact@anchorpoint-it.com?subject=About AnchorPoint IT">
-                    Contact Geoff
-                </a>
-                <a class="btn" href="/services.html">
-                    Our Services
-                </a>
+                        <div class="actions" style="justify-content: flex-start; padding-left: 0;">
+                            <a class="btn primary" href="mailto:contact@anchorpoint-it.com">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <footer class="micro">
