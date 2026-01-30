@@ -448,3 +448,23 @@ main ol {
   list-style: decimal;
   padding-left: 1.2em;
 }
+
+/* ===== List text visibility fix ===== */
+
+/* Ensure list text inherits visible color */
+main li {
+  color: inherit;
+  opacity: 1;
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Make sure markers are visible */
+main li::marker {
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* If lists live inside light cards, force readable text */
+.card ul,
+.card ol {
+  color: #1a1a1a;
+}
