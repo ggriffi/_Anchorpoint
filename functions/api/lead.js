@@ -80,7 +80,7 @@ UA: ${lead.ua}
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                from: env.LEAD_FROM_EMAIL || "leads@anchorpoint-it.com",
+                from: env.LEAD_FROM_EMAIL || "contact@anchorpoint-it.com",
                 to: [env.LEAD_TO_EMAIL],
                 subject,
                 text,
