@@ -1,50 +1,115 @@
-<link rel="stylesheet" href="/styles.css" />
-<link rel="stylesheet" href="/assets/css/anchorpoint-it.css" />
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Book a consult — AnchorPoint IT</title>
+    <meta name="description" content="Book a consult with AnchorPoint IT. Share a few details and we'll follow up." />
 
-<form method="post" action="/api/lead" class="ap-form">
-    <label>
-        <span>Name *</span>
-        <input name="name" required autocomplete="name">
-    </label>
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/assets/css/anchorpoint-it.css" />
+</head>
 
-    <label>
-        <span>Email *</span>
-        <input type="email" name="email" required autocomplete="email">
-    </label>
+<body>
+    <header class="ap-header">
+        <div class="ap-header-inner">
+            <a href="/index.html" class="ap-brand">
+                <img src="/assets/logo-96.webp" width="88" height="88" alt="Anchorpoint IT" class="ap-mark"
+                    decoding="async">
+                <div class="ap-brand-text">
+                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+                </div>
+            </a>
 
-    <label>
-        <span>Phone</span>
-        <input name="phone" autocomplete="tel">
-    </label>
+            <nav class="ap-nav">
+                <a href="/services.html">Services</a>
+                <a href="/about.html">About</a>
+                <a class="ap-btn ap-btn--primary" href="/consult.html" aria-current="page">Book a consult</a>
+            </nav>
+        </div>
+    </header>
 
-    <label>
-        <span>Company / Organization</span>
-        <input name="org" autocomplete="organization">
-    </label>
+    <main class="wrap">
+        <section class="card" aria-label="Consult intake form">
+            <h1 style="margin:0 0 8px;">Book a consult</h1>
+            <p class="micro" style="margin:0 0 16px; opacity:.85;">
+                Share a few details and I’ll follow up to schedule a quick call.
+            </p>
 
-    <label>
-        <span>What can I help with? *</span>
-        <select name="service" required>
-            <option value="" selected disabled>Select one</option>
-            <option>Network / Wi-Fi reliability</option>
-            <option>Firewall / VLAN segmentation</option>
-            <option>Security hardening</option>
-            <option>New setup / rebuild</option>
-            <option>Ongoing support</option>
-            <option>Other</option>
-        </select>
-    </label>
+            <div id="sent" class="micro" style="display:none; margin:0 0 14px;">
+                ✅ Thanks — your request was sent. I’ll follow up soon.
+            </div>
 
-    <label>
-        <span>Brief description *</span>
-        <textarea name="message" rows="6" required></textarea>
-    </label>
+            <form method="post" action="/api/lead" class="ap-form" accept-charset="UTF-8">
+                <div class="ap-grid">
+                    <label>
+                        <span>Name *</span>
+                        <input name="name" required autocomplete="name">
+                    </label>
 
-    <!-- Turnstile widget (Step 3) -->
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAACV1WwE9kUwzIFMg"></div>
+                    <label>
+                        <span>Email *</span>
+                        <input type="email" name="email" required autocomplete="email">
+                    </label>
 
-    <button class="ap-btn ap-btn--primary" type="submit">Submit</button>
-</form>
+                    <label>
+                        <span>Phone</span>
+                        <input name="phone" autocomplete="tel">
+                    </label>
 
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+                    <label>
+                        <span>Company / Organization</span>
+                        <input name="org" autocomplete="organization">
+                    </label>
+
+                    <label class="ap-span-2">
+                        <span>What can I help with? *</span>
+                        <select name="service" required>
+                            <option value="" selected disabled>Select one</option>
+                            <option>Network / Wi-Fi reliability</option>
+                            <option>Firewall / VLAN segmentation</option>
+                            <option>Security hardening</option>
+                            <option>New setup / rebuild</option>
+                            <option>Ongoing support</option>
+                            <option>Other</option>
+                        </select>
+                    </label>
+
+                    <label class="ap-span-2">
+                        <span>Brief description *</span>
+                        <textarea name="message" rows="6" required></textarea>
+                    </label>
+
+                    <div class="ap-span-2" style="margin-top:6px;">
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAACV1WwE9kUwzIFMg"></div>
+                    </div>
+
+                    <label class="ap-span-2 ap-check">
+                        <input type="checkbox" name="consent" required>
+                        <span>It’s okay for AnchorPoint IT to contact me about this request.</span>
+                    </label>
+                </div>
+
+                <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="ap-btn ap-btn--primary" type="submit">Submit request</button>
+                    <a class="ap-btn" href="/index.html">Back to home</a>
+                </div>
+
+                <p class="micro" style="margin-top:10px; opacity:.85;">
+                    Prefer email? <a href="mailto:contact@anchorpoint-it.com">contact@anchorpoint-it.com</a>
+                </p>
+            </form>
+
+            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+            <script>
+                const params = new URLSearchParams(location.search);
+                if (params.get("sent") === "1") document.getElementById("sent").style.display = "block";
+            </script>
+        </section>
+    </main>
+</body>
+
+</html>
