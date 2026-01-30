@@ -73,22 +73,24 @@ IP: ${lead.ip}
 UA: ${lead.ua}
 `;
 
-        await fetch("https://api.resend.com/emails", {
+        const res = await fetch("https://api.resend.com/emails", {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${env.RESEND_API_KEY}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                from: "AnchorPoint IT <onboarding@resend.dev>",
+                from: env.LEAD_FROM_EMAIL || "onboarding@resend.dev",
                 to: [env.LEAD_TO_EMAIL],
                 subject,
                 text,
                 reply_to: email,
             }),
         });
-    }
 
-    // Redirect back to consult page with success flag
-    return Response.redirect(new URL("/consult.html?sent=1", request.url).toString(), 303);
-}
+        const bodyText = await res.text();
+        console.log("Resend status:", res.status, bodyText);
+
+        // Redirect back to consult page with success flag
+        return Response.redirect(new URL("/consult.html?sent=1", request.url).toString(), 303);
+    }
