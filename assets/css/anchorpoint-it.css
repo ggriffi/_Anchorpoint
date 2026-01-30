@@ -242,3 +242,24 @@ body {
   color: var(--muted);
   padding: 12px 0 6px;
 }
+
+
+/* ===== HARD FIX: list text invisible but markers visible ===== */
+main li,
+main li * {
+  color: #121826 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  /* kills gradient/clip-text tricks that often make text disappear */
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  text-shadow: none !important;
+}
+
+/* keep bullets visible too */
+main li::marker {
+  color: rgba(18, 24, 38, 0.65) !important;
+}
