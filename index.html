@@ -51,8 +51,12 @@
 
     <main class="wrap">
         <section class="card" aria-label="AnchorPoint IT feature">
-            <img class="hero" src="/assets/anchorpoint-feature.avif"
-                alt="AnchorPoint IT — Magazine-style feature overview" />
+            <img class="hero" src="/assets/anchorpoint-feature.webp" srcset="
+    /assets/anchorpoint-feature-480.webp 480w,
+    /assets/anchorpoint-feature-800.webp 800w,
+    /assets/anchorpoint-feature-1200.webp 1200w
+  " sizes="(max-width: 768px) 92vw, 1010px" width="1010" height="1515"
+                alt="AnchorPoint IT — Magazine-style feature overview" fetchpriority="high" decoding="async" />
 
             <div class="actions" aria-label="Quick actions">
 
