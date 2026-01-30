@@ -2,11 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Services | AnchorPoint IT</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/assets/css/anchorpoint-it.css">
+    <style>
+        .editorial-container {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            min-height: 550px;
+        }
+
+        .editorial-image {
+            flex: 1;
+            max-width: 45%;
+            overflow: hidden;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .editorial-text {
+            flex: 1.2;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .editorial-container {
+                flex-direction: column;
+            }
+
+            .editorial-image {
+                max-width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,12 +67,43 @@
         </div>
     </header>
 
-    <main class="ap-page">
-        <article class="ap-surface">
-            <img class="hero" src="/assets/services.png" alt="AnchorPoint IT Services Overview" />
+    <main class="wrap">
+        <article class="card" aria-label="Our Services">
+            <div class="editorial-container">
+                <div class="editorial-image">
+                    <img src="/assets/services-feature.png" alt="AnchorPoint IT Managed Infrastructure" />
+                </div>
 
-            <footer class="ap-footer">
-                <strong>AnchorPoint IT</strong> — Leavenworth, KS
+                <div class="editorial-text">
+                    <div class="ap-content">
+                        <h1>Strategic IT Management</h1>
+                        <p>We provide high-level infrastructure design and ongoing support that ensures your
+                            organization remains stable and secure.</p>
+
+                        <h2>Network Infrastructure</h2>
+                        <ul style="padding-left: 20px;">
+                            <li><strong>VLAN Segmentation:</strong> Designing secure, high-performance networks tailored
+                                for your specific needs.</li>
+                            <li><strong>Wi-Fi Reliability:</strong> Eliminating dead zones and ensuring robust coverage
+                                for churches and small businesses.</li>
+                            <li><strong>Security Configuration:</strong> Firewall and endpoint security baked into the
+                                foundation.</li>
+                        </ul>
+
+                        <h2>Managed Support</h2>
+                        <p>From day-to-day troubleshooting to long-term technology roadmaps, we act as your steady
+                            technical partner.</p>
+
+                        <div class="actions" style="justify-content: flex-start; padding-left: 0; margin-top: 20px;">
+                            <a class="btn primary"
+                                href="mailto:contact@anchorpoint-it.com?subject=Service Inquiry">Schedule a Consult</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="micro">
+                <strong>AnchorPoint IT</strong> — Reliable Networks • Clear Solutions • Leavenworth, KS
             </footer>
         </article>
     </main>
