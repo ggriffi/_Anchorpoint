@@ -1,95 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>About — AnchorPoint IT</title>
-    <meta name="description" content="About AnchorPoint IT — grounded, reliable IT for growing organizations." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AnchorPoint IT</title>
+    <style>
+        :root {
+            --primary-blue: #004066;
+            --text-dark: #1a1a1a;
+            --text-muted: #4a5568;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
 
-    <link rel="icon" href="/assets/favicon.png" />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/anchorpoint-it.css">
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #e5e7eb;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            padding: 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            color: var(--text-dark);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .card strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px 40px;
+            text-align: right;
+            font-size: 0.9rem;
+            border-top: 1px solid #edf2f7;
+        }
+
+        .footer a {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="ap-header">
-        <div class="ap-header-inner">
-            <a href="/index.html" class="ap-brand">
-                <img src="/assets/logo-1024.png" alt="Anchorpoint IT" class="ap-mark">
-                <div class="ap-brand-text">
-                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
-                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
-                </div>
-            </a>
 
-            <nav class="ap-nav">
-                <a href="/services.html">Services</a>
-                <a href="/about.html" aria-current="page">About</a>
-                <a class="ap-btn ap-btn--primary" href="/index.html#contact">Book a consult</a>
-            </nav>
+    <div class="container">
+        <div class="header">
+            <h1>About AnchorPoint IT</h1>
+            <p class="tagline">Practical, security-focused IT for organizations that need clarity—not complexity.</p>
+            <a href="#" class="btn">View Services</a>
         </div>
-    </header>
 
-    <main class="wrap">
-        <div class="ap-page">
-            <article class="ap-surface">
-                <div class="ap-hero">
-                    <h1>About AnchorPoint IT</h1>
-                    <p>Practical, security-focused IT for organizations that need clarity—not complexity.</p>
+        <div class="content">
+            <div class="intro-text">
+                <p><strong>AnchorPoint IT</strong> provides grounded, reliable technology solutions for small
+                    businesses, nonprofits, churches, and growing teams. Our focus is simple: build stable systems, keep
+                    them secure, and make them easy to manage.</p>
+                <p>Whether you’re dealing with unreliable Wi-Fi, security concerns, or outdated infrastructure,
+                    AnchorPoint IT acts as your steady technical partner.</p>
+            </div>
 
-                    <div class="ap-hero-actions">
-                        <a class="btn primary" href="/services.html">View Services</a>
-                        <a class="btn" href="/index.html">Back to Home</a>
-                    </div>
+            <h2>How we work</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>Listen & Audit</strong>
+                    We start by understanding your pain points and assessing your current environment before proposing
+                    any changes.
                 </div>
-
-                <div class="ap-content">
-                    <p>
-                        <strong>AnchorPoint IT</strong> provides grounded, reliable technology solutions for small
-                        businesses,
-                        nonprofits, churches, and growing teams. Our focus is simple: build stable systems, keep them
-                        secure,
-                        and make them easy to manage.
-                    </p>
-
-                    <p>
-                        Whether you’re dealing with unreliable Wi-Fi, security concerns, outdated infrastructure, or you
-                        just
-                        need someone you can trust to “make it work,” AnchorPoint IT acts as your steady technical
-                        partner.
-                    </p>
-
-                    <section>
-                        <h2>How we work</h2>
-                        <ul>
-                            <li>No unnecessary upsells</li>
-                            <li>No overengineered solutions</li>
-                            <li>Clear recommendations, clean implementations, and documentation</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>What you can expect</h2>
-                        <ul>
-                            <li>Honest assessments and prioritized next steps</li>
-                            <li>Security-first configuration (without breaking usability)</li>
-                            <li>Better uptime, better performance, fewer surprises</li>
-                        </ul>
-                    </section>
-
-                    <div class="ap-footer">
-                        <strong>AnchorPoint IT</strong> • Leavenworth, KS •
-                        <a href="mailto:contact@anchorpoint-it.com">contact@anchorpoint-it.com</a>
-                    </div>
+                <div class="card">
+                    <strong>Simplify</strong>
+                    We replace "band-aid" fixes with stable infrastructure. If a solution is too complex for your team
+                    to use, it’s not the right solution.
                 </div>
-            </article>
+                <div class="card">
+                    <strong>Secure by Default</strong>
+                    Security is baked into every router, server, and cloud account we manage—not treated as an
+                    afterthought.
+                </div>
+            </div>
+
+            <h2>What you can expect</h2>
+            <div class="grid">
+                <div class="card">
+                    <strong>Clarity, Not Jargon</strong>
+                    We explain technology in plain English so you always know what you’re paying for and why it matters.
+                </div>
+                <div class="card">
+                    <strong>Predictable Reliability</strong>
+                    We show up when we say we will and build systems that stay up, minimizing your downtime.
+                </div>
+            </div>
         </div>
-    </main>
+
+        <div class="footer">
+            <a href="mailto:contact@anchorpoint-it.com">contact@anchorpoint-it.com</a>
+        </div>
+    </div>
+
 </body>
 
 </html>
