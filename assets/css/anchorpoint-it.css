@@ -263,3 +263,74 @@ main li * {
 main li::marker {
   color: rgba(18, 24, 38, 0.65) !important;
 }
+
+/* =========================
+   Consult form layout
+   ========================= */
+
+.ap-form label {
+  display: block;
+  font-weight: 500;
+}
+
+.ap-form label>span {
+  display: block;
+  margin-bottom: 6px;
+  opacity: .9;
+}
+
+.ap-form input,
+.ap-form select,
+.ap-form textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, .10);
+  background: rgba(255, 255, 255, .92);
+  color: rgba(0, 0, 0, .88);
+  outline: none;
+}
+
+.ap-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+/* Two-column grid on desktop */
+.ap-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.ap-span-2 {
+  grid-column: 1 / -1;
+}
+
+/* Checkbox row */
+.ap-check {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ap-check input {
+  width: auto;
+  min-height: auto;
+  margin-top: 4px;
+}
+
+/* Mobile: single column */
+@media (max-width: 760px) {
+  .ap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make Turnstile not crush layout */
+.cf-turnstile {
+  max-width: 100%;
+}
