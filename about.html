@@ -4,173 +4,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About AnchorPoint IT</title>
+    <title>About | Anchorpoint-IT</title>
     <style>
+        /* Shared Styles & Variables */
         :root {
-            --primary-blue: #004066;
-            --text-dark: #1a1a1a;
-            --text-muted: #4a5568;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
+            --ap-navy: #004066;
+            --ap-text: #1a1a1a;
+            --ap-muted: #4a5568;
+            --ap-bg-soft: #f8fafc;
+            --ap-white: #ffffff;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #e5e7eb;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             margin: 0;
-            padding: 40px 20px;
+            color: var(--ap-text);
+            background-color: #f1f5f9;
         }
 
-        .container {
+        /* --- Your Existing Header Styles (Refined) --- */
+        .ap-header {
+            background: var(--ap-white);
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .ap-header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .ap-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .ap-mark {
+            height: 50px;
+            width: auto;
+            margin-right: 15px;
+        }
+
+        .ap-brand-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .ap-brand-name span {
+            color: var(--ap-navy);
+        }
+
+        .ap-brand-tagline {
+            font-size: 0.85rem;
+            color: var(--ap-muted);
+            margin-top: 4px;
+        }
+
+        .ap-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .ap-nav a {
+            text-decoration: none;
+            color: var(--ap-text);
+            font-weight: 500;
+        }
+
+        .ap-btn--primary {
+            background: var(--ap-navy);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        /* --- About Page Content Styles --- */
+        .ap-hero {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .ap-container {
             max-width: 900px;
             margin: 0 auto;
-            background: var(--white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+            background: var(--ap-white);
         }
 
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
-            padding: 40px;
-            border-bottom: 1px solid #e2e8f0;
+        .ap-section-title {
+            font-size: 2rem;
+            margin-top: 40px;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 10px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
-            color: var(--text-dark);
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        /* Content Sections */
-        .content {
-            padding: 40px;
-        }
-
-        .intro-text {
-            font-size: 1.05rem;
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin: 40px 0 20px 0;
-            color: var(--text-dark);
-        }
-
-        .grid {
+        .ap-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
 
-        .card {
-            background: var(--bg-light);
-            padding: 20px;
+        .ap-card {
+            background: var(--ap-bg-soft);
+            padding: 25px;
             border-radius: 8px;
-            border-left: 4px solid var(--primary-blue);
         }
 
-        .card strong {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--primary-blue);
+        .ap-card h3 {
+            margin-top: 0;
+            color: var(--ap-navy);
+            font-size: 1.2rem;
         }
 
-        /* Footer */
-        .footer {
-            padding: 20px 40px;
-            text-align: right;
+        .ap-footer-contact {
+            text-align: center;
+            padding: 40px;
             font-size: 0.9rem;
-            border-top: 1px solid #edf2f7;
-        }
-
-        .footer a {
-            color: var(--primary-blue);
-            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="header">
+    <header class="ap-header">
+        <div class="ap-header-inner">
+            <a href="/index.html" class="ap-brand">
+                <img src="/assets/logo-1024.png" alt="Anchorpoint IT" class="ap-mark">
+                <div class="ap-brand-text">
+                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+                </div>
+            </a>
+
+            <nav class="ap-nav">
+                <a href="/services.html">Services</a>
+                <a href="/about.html" aria-current="page" style="color: var(--ap-navy); font-weight: 700;">About</a>
+                <a class="ap-btn ap-btn--primary" href="/index.html#contact">Book a consult</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ap-hero">
             <h1>About AnchorPoint IT</h1>
-            <p class="tagline">Practical, security-focused IT for organizations that need clarity—not complexity.</p>
-            <a href="#" class="btn">View Services</a>
-        </div>
+            <p>Practical, security-focused IT for organizations that need clarity—not complexity.</p>
+        </section>
 
-        <div class="content">
-            <div class="intro-text">
-                <p><strong>AnchorPoint IT</strong> provides grounded, reliable technology solutions for small
-                    businesses, nonprofits, churches, and growing teams. Our focus is simple: build stable systems, keep
-                    them secure, and make them easy to manage.</p>
-                <p>Whether you’re dealing with unreliable Wi-Fi, security concerns, or outdated infrastructure,
-                    AnchorPoint IT acts as your steady technical partner.</p>
+        <div class="ap-container">
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                <strong>AnchorPoint IT</strong> provides grounded, reliable technology solutions for small businesses,
+                nonprofits, churches, and growing teams. Our focus is simple: build stable systems, keep them secure,
+                and make them easy to manage.
+            </p>
+            <p>Whether you’re dealing with unreliable Wi-Fi, security concerns, outdated infrastructure, or you just
+                need someone you can trust to “make it work,” AnchorPoint IT acts as your steady technical partner.</p>
+
+            <h2 class="ap-section-title">How we work</h2>
+            <div class="ap-grid">
+                <div class="ap-card">
+                    <h3>Listen & Audit</h3>
+                    <p>We start by understanding your environment. We don't guess; we gather data to see exactly where
+                        your bottlenecks and risks live.</p>
+                </div>
+                <div class="ap-card">
+                    <h3>Simplify</h3>
+                    <p>Complexity is the enemy of security. We strip away the unnecessary and build systems that your
+                        team can actually use.</p>
+                </div>
+                <div class="ap-card">
+                    <h3>Secure by Default</h3>
+                    <p>From firewall rules to password policies, security is baked into the foundation of everything we
+                        build.</p>
+                </div>
             </div>
 
-            <h2>How we work</h2>
-            <div class="grid">
-                <div class="card">
-                    <strong>Listen & Audit</strong>
-                    We start by understanding your pain points and assessing your current environment before proposing
-                    any changes.
+            <h2 class="ap-section-title">What you can expect</h2>
+            <div class="ap-grid">
+                <div class="ap-card">
+                    <h3>Clarity, Not Jargon</h3>
+                    <p>We speak human. You'll get clear explanations and actionable advice, not a mountain of technical
+                        buzzwords.</p>
                 </div>
-                <div class="card">
-                    <strong>Simplify</strong>
-                    We replace "band-aid" fixes with stable infrastructure. If a solution is too complex for your team
-                    to use, it’s not the right solution.
-                </div>
-                <div class="card">
-                    <strong>Secure by Default</strong>
-                    Security is baked into every router, server, and cloud account we manage—not treated as an
-                    afterthought.
-                </div>
-            </div>
-
-            <h2>What you can expect</h2>
-            <div class="grid">
-                <div class="card">
-                    <strong>Clarity, Not Jargon</strong>
-                    We explain technology in plain English so you always know what you’re paying for and why it matters.
-                </div>
-                <div class="card">
-                    <strong>Predictable Reliability</strong>
-                    We show up when we say we will and build systems that stay up, minimizing your downtime.
+                <div class="ap-card">
+                    <h3>Reliable Partnership</h3>
+                    <p>We prioritize stability so you can prioritize your work. We are the "anchor" for your technology
+                        stack.</p>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="footer">
-            <a href="mailto:contact@anchorpoint-it.com">contact@anchorpoint-it.com</a>
-        </div>
-    </div>
+    <footer class="ap-footer-contact">
+        <a href="mailto:contact@anchorpoint-it.com" style="color: var(--ap-navy);">contact@anchorpoint-it.com</a>
+    </footer>
 
 </body>
 
