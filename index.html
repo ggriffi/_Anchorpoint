@@ -72,14 +72,15 @@
         <article class="card" aria-label="AnchorPoint IT — Home">
             <div class="editorial-container">
                 <div class="editorial-image">
-                    <a href="/services.html" title="View our Services">
+                    <div class="image-zoom-trigger" onclick="this.classList.toggle('is-zoomed')">
                         <picture>
                             <source type="image/webp" srcset="
-                            /assets/anchorpoint-feature-480.webp 480w,
-                            /assets/anchorpoint-feature-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
+                /assets/anchorpoint-feature-480.webp 480w,
+                /assets/anchorpoint-feature-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
                             <img src="/assets/anchorpoint-feature-800.webp" alt="AnchorPoint IT Infrastructure" />
                         </picture>
-                    </a>
+                        <div class="zoom-hint">Click to enlarge</div>
+                    </div>
                 </div>
 
                 <div class="editorial-text">
