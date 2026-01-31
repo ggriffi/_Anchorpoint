@@ -72,12 +72,14 @@
         <article class="card" aria-label="AnchorPoint IT — Home">
             <div class="editorial-container">
                 <div class="editorial-image">
-                    <div class="image-zoom-trigger" onclick="this.classList.toggle('is-zoomed')">
+                    <div class="image-zoom-trigger" onclick="this.classList.toggle('is-zoomed')" role="button"
+                        aria-label="Enlarge image">
                         <picture>
-                            <source type="image/webp" srcset="
-                /assets/anchorpoint-feature-480.webp 480w,
-                /assets/anchorpoint-feature-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
-                            <img src="/assets/anchorpoint-feature-800.webp" alt="AnchorPoint IT Infrastructure" />
+                            <source type="image/webp"
+                                srcset="/assets/anchorpoint-feature-480.webp 480w, /assets/anchorpoint-feature-800.webp 800w"
+                                sizes="(max-width: 768px) 100vw, 45vw">
+                            <img src="/assets/anchorpoint-feature-800.webp" alt="AnchorPoint IT Infrastructure"
+                                class="feature-img" />
                         </picture>
                         <div class="zoom-hint">Click to enlarge</div>
                     </div>
