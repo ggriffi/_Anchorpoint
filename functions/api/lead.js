@@ -109,6 +109,6 @@ UA: ${lead.ua}
         console.log("Resend not configured: missing RESEND_API_KEY or LEAD_TO_EMAIL");
     }
 
-    // Always redirect back to consult page with success flag
-    return Response.redirect(new URL("/consult.html?sent=1", request.url).toString(), 303);
+    // Redirect to the new dedicated success page instead of a query flag
+    return Response.redirect(new URL("/success.html", request.url).toString(), 303);
 }
