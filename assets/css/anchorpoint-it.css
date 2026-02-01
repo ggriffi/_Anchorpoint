@@ -25,11 +25,7 @@
   --ap-font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-body {
-  font-family: var(--ap-font-body);
-  color: var(--ap-ink);
-  background: var(--ap-white);
-}
+
 
 /* Brand headline + subhead */
 .ap-h1 {
@@ -369,7 +365,6 @@ h3,
 /* Supporting text */
 p {
   max-width: 60ch;
-  color: rgba(255, 255, 255, 0.88);
 }
 
 /* Lists */
@@ -383,4 +378,108 @@ li {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 500;
   opacity: 0.85;
+}
+
+/* ===== Typography (fonts only) ===== */
+html,
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.ap-h1,
+.ap-brand-name {
+  font-family: 'Manrope', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ===== Color by surface (THIS fixes invisibility) ===== */
+
+/* Default page (your dark gradient background) */
+body {
+  color: var(--text);
+}
+
+/* Any light "card" / white surface should use dark text */
+.card,
+.card p,
+.card li,
+.card a,
+.editorial-text {
+  color: #0b1220;
+  /* dark ink */
+}
+
+/* Make sure bullet markers are visible on light surfaces */
+.card li::marker {
+  color: rgba(11, 18, 32, 0.55);
+}
+
+/* Optional: soften paragraph tone on light surfaces */
+.card p {
+  color: rgba(11, 18, 32, 0.82);
+}
+
+/* =====================================================
+   Typography – AnchorPoint IT (final)
+   ===================================================== */
+
+/* Fonts only (no global colors, no global background) */
+html,
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.ap-h1,
+.ap-brand-name {
+  font-family: 'Manrope', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.ap-h1 {
+  line-height: 1.12;
+  max-width: 22ch;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  max-width: 60ch;
+}
+
+li {
+  line-height: 1.55;
+}
+
+.ap-brand-tagline {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* ===== Color by surface ===== */
+/* Default: keep whatever your main theme sets in styles.css */
+
+/* On white cards / editorial text, force dark ink */
+.card,
+.card p,
+.card li,
+.card a,
+.editorial-text {
+  color: #0b1220;
+}
+
+.card p {
+  color: rgba(11, 18, 32, 0.82);
+}
+
+.card li::marker {
+  color: rgba(11, 18, 32, 0.55);
 }
