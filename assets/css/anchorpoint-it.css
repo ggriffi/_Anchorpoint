@@ -540,3 +540,43 @@ li {
 .card li::marker {
   color: #7fb6ff;
 }
+
+/* ===== HARD OVERRIDE: Right column text contrast ===== */
+/* Targets your actual layout wrappers: .editorial-text + .ap-content */
+
+.editorial-text,
+.editorial-text *,
+.ap-content,
+.ap-content * {
+  color: #f6f9ff !important;
+  -webkit-text-fill-color: #f6f9ff !important;
+}
+
+/* Headline brighter */
+.ap-content .ap-h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Paragraph slightly softer for hierarchy */
+.ap-content p {
+  color: rgba(246, 249, 255, 0.86) !important;
+  -webkit-text-fill-color: rgba(246, 249, 255, 0.86) !important;
+}
+
+/* Bullet labels pop */
+.ap-content li strong {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Bullet body slightly dimmer */
+.ap-content li {
+  color: rgba(246, 249, 255, 0.92) !important;
+  -webkit-text-fill-color: rgba(246, 249, 255, 0.92) !important;
+}
+
+/* Markers visible but not loud */
+.ap-content li::marker {
+  color: rgba(127, 182, 255, 0.95) !important;
+}
