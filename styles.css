@@ -32,6 +32,15 @@ a,
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
+.ap-h1 {
+  font-weight: 600;
+  /* was effectively 700-feeling */
+  line-height: 1.12;
+  /* tighter = less vertical bulk */
+  max-width: 22ch;
+  /* keeps it friendly and readable */
+}
+
 
 * {
   box-sizing: border-box;
