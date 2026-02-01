@@ -673,3 +673,38 @@ li {
   font-size: 14px;
   padding: 10px 16px;
 }
+
+/* =====================================================
+   FORM VISIBILITY FIX (consult.html)
+   Exempt inputs from global .ap-content text overrides
+   ===================================================== */
+
+/* Ensure labels are readable on dark surfaces */
+.ap-form label,
+.ap-form label span {
+  color: #eef3ff !important;
+  -webkit-text-fill-color: #eef3ff !important;
+}
+
+/* Force form field text to dark ink (on light input backgrounds) */
+.ap-form input,
+.ap-form select,
+.ap-form textarea {
+  color: #0b1220 !important;
+  -webkit-text-fill-color: #0b1220 !important;
+
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Placeholders must be set separately */
+.ap-form input::placeholder,
+.ap-form textarea::placeholder {
+  color: rgba(11, 18, 32, 0.55) !important;
+  -webkit-text-fill-color: rgba(11, 18, 32, 0.55) !important;
+}
+
+/* Fix select dropdown text (some browsers) */
+.ap-form select option {
+  color: #0b1220 !important;
+}
