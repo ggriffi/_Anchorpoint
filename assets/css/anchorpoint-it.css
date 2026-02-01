@@ -639,3 +639,37 @@ li {
   /* tiny tightening = big visual win */
   max-width: 25ch;
 }
+
+/* =====================================================
+   GLOBAL TYPOGRAPHY SCALE DOWN
+   ===================================================== */
+
+/* Base body text */
+.ap-content,
+.ap-content p,
+.ap-content li {
+  font-size: 15px;
+  /* down from 16px */
+  line-height: 1.55;
+}
+
+/* H1 — smaller, calmer */
+.ap-content .ap-h1 {
+  font-size: clamp(24px, 2vw, 30px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  max-width: 26ch;
+}
+
+/* Bullet labels */
+.ap-content li strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Buttons — slightly tighter */
+.ap-content .btn,
+.ap-content .ap-btn {
+  font-size: 14px;
+  padding: 10px 16px;
+}
