@@ -580,3 +580,44 @@ li {
 .ap-content li::marker {
   color: rgba(127, 182, 255, 0.95) !important;
 }
+
+/* =====================================================
+   FINAL HERO TEXT CONTRAST FIX (RIGHT PANEL)
+   ===================================================== */
+
+/* Base text on dark glass */
+.editorial-text,
+.ap-content {
+  color: #eef3ff !important;
+  -webkit-text-fill-color: #eef3ff !important;
+}
+
+/* Headline — pure white */
+.ap-content .ap-h1 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Paragraph — clearly readable, softer than headline */
+.ap-content p {
+  color: #e2ebff !important;
+  -webkit-text-fill-color: #e2ebff !important;
+}
+
+/* Bullet items */
+.ap-content li {
+  color: #f4f7ff !important;
+  -webkit-text-fill-color: #f4f7ff !important;
+}
+
+/* Bullet labels */
+.ap-content li strong {
+  color: #ffffff !important;
+  font-weight: 600;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Bullet markers */
+.ap-content li::marker {
+  color: #9fc5ff !important;
+}
