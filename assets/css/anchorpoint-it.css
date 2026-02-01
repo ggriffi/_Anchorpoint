@@ -514,3 +514,29 @@ li {
 .card strong {
   color: var(--ap-text-accent);
 }
+
+/* ===== FORCE CONTRAST FOR HERO / CARD TEXT ===== */
+
+.card,
+.editorial-text {
+  color: #eaf2ff;
+  /* very light blue-white */
+}
+
+.card h1,
+.ap-h1 {
+  color: #ffffff;
+}
+
+.card li {
+  color: #f1f5ff;
+}
+
+.card li strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.card li::marker {
+  color: #7fb6ff;
+}
