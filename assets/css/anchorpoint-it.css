@@ -630,3 +630,12 @@ li {
   max-width: 24ch;
   /* allows one line on desktop, wraps gracefully */
 }
+
+/* === Final H1 polish: one-line bias without forcing === */
+.ap-content .ap-h1 {
+  font-size: clamp(27px, 2.25vw, 34px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  /* tiny tightening = big visual win */
+  max-width: 25ch;
+}
