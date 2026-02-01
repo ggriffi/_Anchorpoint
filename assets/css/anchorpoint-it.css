@@ -483,3 +483,34 @@ li {
 .card li::marker {
   color: rgba(11, 18, 32, 0.55);
 }
+
+.card h1,
+.ap-h1 {
+  color: var(--ap-text-strong);
+}
+
+.card p {
+  color: var(--ap-text-body);
+}
+
+.card li {
+  color: var(--ap-text-strong);
+}
+
+.card li strong {
+  color: var(--ap-text-strong);
+  font-weight: 600;
+}
+
+.card li strong+* {
+  color: var(--ap-text-body);
+  font-weight: 400;
+}
+
+.card li::marker {
+  color: var(--ap-text-accent);
+}
+
+.card strong {
+  color: var(--ap-text-accent);
+}
