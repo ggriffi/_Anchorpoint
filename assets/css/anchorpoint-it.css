@@ -621,3 +621,12 @@ li {
 .ap-content li::marker {
   color: #9fc5ff !important;
 }
+
+/* === H1 size tuning: encourage single-line headline === */
+.ap-content .ap-h1 {
+  font-size: clamp(28px, 2.4vw, 36px);
+  /* was effectively ~38px */
+  line-height: 1.1;
+  max-width: 24ch;
+  /* allows one line on desktop, wraps gracefully */
+}
