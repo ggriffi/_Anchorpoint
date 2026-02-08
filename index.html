@@ -1,73 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anchorpoint-IT | Leavenworth, KS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AnchorPoint IT — Grounded IT for Growing Organizations</title>
     <meta name="description"
-        content="Network engineering and IT infrastructure consulting in Leavenworth. Over 20 years of experience in high-availability carrier operations.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="anchorpoint-it.css">
+        content="AnchorPoint IT — Grounded IT for Growing Organizations. Reliable networks, clear solutions." />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://anchorpoint-it.com/" />
+
+    <!-- Social preview (use a lightweight social image, not the giant hero) -->
+    <meta property="og:title" content="AnchorPoint IT" />
+    <meta property="og:description" content="Grounded IT for Growing Organizations" />
+    <meta property="og:image" content="https://anchorpoint-it.com/assets/og/anchorpoint-social-1200x630.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/favicon.png.html" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon-256.png">
+
+    <!-- Preconnect fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Preload the LCP hero (mobile + desktop) -->
+    <link rel="preload" as="image" href="assets/anchorpoint-feature-800.webp" imagesrcset="/assets/anchorpoint-feature-480.webp 480w,
+              /assets/anchorpoint-feature-800.webp 800w,
+              /assets/anchorpoint-feature-1200.webp 1200w" imagesizes="(max-width: 768px) 92vw, 1010px">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/anchorpoint-it.css">
 </head>
 
 <body>
-
     <header class="ap-header">
         <div class="ap-header-inner">
-            <a href="/" class="ap-brand">
-                <img src="AnchorPoint_IT_Letterhead_Header_rounded.png" alt="Anchorpoint-IT" class="ap-mark">
-                <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+            <a href="index.html" class="ap-brand">
+                <!-- Swap in small logo assets (generate these) -->
+                <picture>
+                    <source type="image/webp" srcset="assets/logo-96.webp 96w, assets/logo-192.webp 192w"
+                        sizes="88px">
+                    <img src="assets/logo-96.webp" width="88" height="88" alt="Anchorpoint IT" class="ap-mark"
+                        decoding="async">
+                </picture>
+
+                <div class="ap-brand-text">
+                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+                </div>
             </a>
+
             <nav class="ap-nav">
+                <a href="services.html" aria-current="page">Services</a>
                 <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="consult.html" class="ap-btn ap-btn--primary">Consult</a>
+                <a class="ap-btn ap-btn--primary" href="consult.html">Book a consult</a>
+
             </nav>
         </div>
     </header>
 
-    <main class="ap-page">
-        <div class="ap-surface">
+    <main class="wrap">
+        <article class="card" aria-label="AnchorPoint IT — Home">
             <div class="editorial-container">
                 <div class="editorial-image">
-                    <img src="anchorpoint-feature.jpg" alt="Infrastructure Logic" class="feature-img">
+                    <div class="image-zoom-trigger" onclick="this.classList.toggle('is-zoomed')" role="button"
+                        aria-label="Enlarge image">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="assets/anchorpoint-feature-480.webp 480w, assets/anchorpoint-feature-800.webp 800w"
+                                sizes="(max-width: 768px) 100vw, 45vw">
+                            <img src="assets/anchorpoint-feature-800.webp" alt="AnchorPoint IT Infrastructure"
+                                class="feature-img" />
+                        </picture>
+                        <div class="zoom-hint">Click to enlarge</div>
+                    </div>
                 </div>
-                <div class="editorial-text ap-content">
-                    <h1 class="ap-h1">Reliability Matters.</h1>
-                    <p>Networks often fail to keep up as organizations expand. Most problems aren't caused by bad
-                        equipment—they're caused by systems that were never designed to grow. I've seen critical
-                        meetings drop and security cameras crawl because of piecemeal additions that don't work
-                        together.</p>
-                    <p>My job is to cut through the clutter and bring things back to stable ground.</p>
+
+                <div class="editorial-text">
+                    <div class="ap-content">
+                        <h1 class="ap-h1">Grounded IT for Growing Organizations</h1>
+                        <p>
+                            We provide security-focused network infrastructure and reliable IT support for small
+                            businesses,
+                            nonprofits, and churches in <strong>Leavenworth, KS</strong>.
+                        </p>
+
+                        <ul style="padding-left: 20px; margin-bottom: 24px;">
+                            <li><strong>Reliable Networks:</strong> Enterprise-grade Wi-Fi and switching.</li>
+                            <li><strong>Security First:</strong> Firewalls and infrastructure built to protect.</li>
+                            <li><strong>Local Support:</strong> A steady partner for your daily tech needs.</li>
+                        </ul>
+
+                        <div class="actions" style="justify-content: flex-start; padding-left: 0;">
+                            <a class="btn primary" href="consult.html">Book a Consult</a>
+                            <a class="btn" href="mailto:support@anchorpoint-it.com">Client Support</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="ap-content">
-                <section>
-                    <h2>Practical, Not Overcomplicated</h2>
-                    <p>Fancy solutions are easy to sell, but I focus on what actually keeps a network running: security,
-                        clear Wi-Fi, and systems that don't need constant babysitting. If your network has you on edge,
-                        it might be time for a closer look.</p>
-                </section>
-
-                <section>
-                    <h2>Field Notes</h2>
-                    <ul>
-                        <li><strong>Security gaps in the firewall</strong></li>
-                        <li><strong>Messy or unlabelled cable runs</strong></li>
-                        <li><strong>Outdated or overloaded equipment</strong></li>
-                        <li><strong>Wi-Fi dead zones in the office</strong></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
+            <footer class="micro">
+                <strong>AnchorPoint IT</strong> — Grounded IT for Growing Organizations • Leavenworth, KS •
+                <a href="legal/terms.html" style="color: inherit; text-decoration: underline;">Terms of Service</a> •
+                <a href="legal/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a>
+            </footer>
+        </article>
     </main>
-
-    <footer class="ap-footer">
-        <div class="micro">Grounded IT for Growing Organizations | Leavenworth, KS</div>
-    </footer>
-
 </body>
 
 </html>

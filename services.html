@@ -2,100 +2,111 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Anchorpoint-IT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Services | AnchorPoint IT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/anchorpoint-it.css">
     <style>
-        :root {
-            --bg: #0f172a;
-            --text: #f8fafc;
-            --accent: #38bdf8;
-            --card: #1e293b;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        header {
+        .editorial-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--card);
+            flex-direction: row;
+            align-items: stretch;
+            min-height: 550px;
         }
 
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 20px;
+        .editorial-image {
+            flex: 1;
+            max-width: 45%;
+            overflow: hidden;
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+        .editorial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
-        .service-card {
-            background: var(--card);
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent);
+        .editorial-text {
+            flex: 1.2;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        h1 {
-            text-align: center;
-            margin-top: 40px;
-        }
+        @media (max-width: 768px) {
+            .editorial-container {
+                flex-direction: column;
+            }
 
-        .service-card h3 {
-            margin-top: 0;
-            color: var(--accent);
+            .editorial-image {
+                max-width: 100%;
+                height: 250px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div style="font-size: 1.5em; font-weight: bold;">ANCHORPOINT<span style="color:var(--accent)">-IT</span>
-            </div>
-            <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a
-                    href="consult.html">Consult</a></nav>
-        </header>
-
-        <h1>Consulting Specialties</h1>
-
-        <div class="grid">
-            <div class="service-card">
-                <h3>Network Infrastructure</h3>
-                <p>Full-stack design using UniFi, EdgeRouter, and managed switching. We specialize in VLAN segmentation
-                    to keep your business data separate from IoT and guest traffic.</p>
-            </div>
-            <div class="service-card">
-                <h3>Smart Home Logic</h3>
-                <p>Moving beyond basic apps. We implement self-hosted Home Assistant servers, local-only Zigbee/Z-Wave
-                    control, and robust automation that respects your privacy.</p>
-            </div>
-            <div class="service-card">
-                <h3>Business Continuity</h3>
-                <p>Ensuring your "Work from Home" is actually working. We set up dual-WAN failover, secure VPN tunnels,
-                    and traffic prioritization for critical applications.</p>
-            </div>
+    <header class="ap-header">
+        <div class="ap-header-inner">
+            <a href="index.html" class="ap-brand">
+                <img src="assets/logo-1024.png" alt="Anchorpoint IT" class="ap-mark">
+                <div class="ap-brand-text">
+                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+                </div>
+            </a>
+            <nav class="ap-nav">
+                <a href="services.html" class="active">Services</a>
+                <a href="about.html">About</a>
+                <a class="ap-btn ap-btn--primary" href="index.html#contact">Book a consult</a>
+            </nav>
         </div>
-    </div>
+    </header>
+
+    <main class="wrap">
+        <article class="card" aria-label="Our Services">
+            <div class="editorial-container">
+                <div class="editorial-image">
+                    <img src="assets/services-feature.png" alt="AnchorPoint IT Managed Infrastructure" />
+                </div>
+
+                <div class="editorial-text">
+                    <div class="ap-content">
+                        <h1>Strategic IT Management</h1>
+                        <li>We provide high-level infrastructure design and ongoing support that ensures your
+                            organization remains stable and secure.</li>
+
+                        <h2>Network Infrastructure</h2>
+                        <ul style="padding-left: 20px;">
+                            <li><strong>VLAN Segmentation:</strong> Designing secure, high-performance networks tailored
+                                for your specific needs.</li>
+                            <li><strong>Wi-Fi Reliability:</strong> Eliminating dead zones and ensuring robust coverage
+                                for churches and small businesses.</li>
+                            <li><strong>Security Configuration:</strong> Firewall and endpoint security baked into the
+                                foundation.</li>
+                        </ul>
+
+                        <h2>Managed Support</h2>
+                        <li>From day-to-day troubleshooting to long-term technology roadmaps, we act as your steady
+                            technical partner.</li>
+
+                        <div class="actions" style="justify-content: flex-start; padding-left: 0; margin-top: 20px;">
+                            <a class="btn primary"
+                                href="mailto:contact@anchorpoint-it.com?subject=Service Inquiry">Schedule a Consult</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="micro">
+                <strong>AnchorPoint IT</strong> — Reliable Networks • Clear Solutions • Leavenworth, KS
+            </footer>
+        </article>
+    </main>
 </body>
 
 </html>

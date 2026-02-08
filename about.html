@@ -2,102 +2,114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Anchorpoint-IT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About | AnchorPoint IT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/anchorpoint-it.css">
     <style>
-        :root {
-            --bg: #0f172a;
-            --text: #f8fafc;
-            --accent: #38bdf8;
-            --card: #1e293b;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        header {
+        /* Editorial Side-by-Side Adjustment */
+        .editorial-container {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--card);
+            flex-direction: row;
+            align-items: stretch;
+            min-height: 500px;
+            /* Adjust based on preference */
         }
 
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
+        .editorial-image {
+            flex: 1;
+            max-width: 45%;
+            /* Limits image to less than half the card width */
+            overflow: hidden;
         }
 
-        nav a:hover {
-            color: var(--accent);
+        .editorial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Crops the image to fit the container precisely */
+            display: block;
         }
 
-        h1,
-        h2 {
-            color: var(--accent);
-        }
-
-        .content-box {
-            background: var(--card);
+        .editorial-text {
+            flex: 1.2;
             padding: 40px;
-            border-radius: 12px;
-            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            font-size: 0.8em;
-            opacity: 0.6;
+        /* Mobile Responsive: Stack them on top of each other on small screens */
+        @media (max-width: 768px) {
+            .editorial-container {
+                flex-direction: column;
+            }
+
+            .editorial-image {
+                max-width: 100%;
+                height: 300px;
+                /* Fixed height for mobile banner */
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div style="font-size: 1.5em; font-weight: bold;">ANCHORPOINT<span style="color:var(--accent)">-IT</span>
-            </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+    <header class="ap-header">
+        <div class="ap-header-inner">
+            <a href="index.html" class="ap-brand">
+                <img src="assets/logo-1024.png" alt="Anchorpoint IT" class="ap-mark">
+                <div class="ap-brand-text">
+                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+                </div>
+            </a>
+            <nav class="ap-nav">
                 <a href="services.html">Services</a>
-                <a href="consult.html">Consult</a>
+                <a href="about.html" class="active">About</a>
+                <a class="ap-btn ap-btn--primary" href="index.html#contact">Book a consult</a>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <main class="content-box">
-            <h1>Experience Built on Infrastructure</h1>
-            <p>Anchorpoint-IT isn't a "general repair" shop. It is the culmination of two decades of high-level network
-                engineering. Founded by Geoff Griffith, a veteran of the telecommunications industry, our mission is to
-                bring enterprise-grade stability to the local level.</p>
+    <main class="wrap">
+        <article class="card" aria-label="About AnchorPoint IT">
+            <div class="editorial-container">
+                <div class="editorial-image">
+                    <img src="assets/about-feature.png" alt="Network Engineering Infrastructure" />
+                </div>
 
-            <h2>The Engineering Pedigree</h2>
-            <p>With nearly 10 years spent as a Senior Operations Engineer for major carriers, Geoff has managed the kind
-                of infrastructure that millions of people rely on daily. That career taught a vital lesson:
-                <strong>Redundancy and logic are not optional.</strong></p>
+                <div class="editorial-text">
+                    <div class="ap-content">
+                        <h1>About AnchorPoint IT</h1>
+                        <p>
+                            Led by <strong>Geoff Griffith</strong>, a Network Engineer focusing on infrastructure and
+                            security, AnchorPoint IT provides grounded, reliable technology solutions for small
+                            businesses, nonprofits, and churches.
+                        </p>
 
-            <p>Based in Leavenworth, Kansas, we serve clients who are tired of "consumer-grade" excuses. Whether you are
-                running a business from home or managing a local storefront, your uptime is our primary metric of
-                success.</p>
-        </main>
+                        <h2>How we work</h2>
+                        <ul style="padding-left: 20px;">
+                            <li><strong>Listen & Audit:</strong> Identifying bottlenecks and risks before proposing
+                                solutions.</li>
+                            <li><strong>Simplify:</strong> Replacing "band-aid" fixes with reliable infrastructure.</li>
+                            <li><strong>Secure by Default:</strong> Baking security into the foundation of every build.
+                            </li>
+                        </ul>
 
-        <footer>&copy; 2026 Anchorpoint-IT. Leavenworth, KS.</footer>
-    </div>
+                        <div class="actions" style="justify-content: flex-start; padding-left: 0;">
+                            <a class="btn primary" href="mailto:contact@anchorpoint-it.com">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="micro">
+                <strong>AnchorPoint IT</strong> — Network & Infrastructure Consulting • Leavenworth, KS
+            </footer>
+        </article>
+    </main>
 </body>
 
 </html>
