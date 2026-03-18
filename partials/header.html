@@ -14,10 +14,34 @@
         <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
       </div>
     </a>
-    <nav class="ap-nav" aria-label="Primary navigation">
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="ap-nav" id="primary-nav" aria-label="Primary navigation">
       <a href="/services.html" data-nav="services">Services</a>
       <a href="/about.html" data-nav="about">About</a>
+      <a href="/blog.html" data-nav="blog">Case Studies</a>
       <a class="ap-btn ap-btn--primary" href="/consult.html">Book a Consult</a>
     </nav>
   </div>
 </header>
+
+<script>
+  (function() {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.ap-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function() {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.ap-header')) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>

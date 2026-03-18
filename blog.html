@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Case Studies — AnchorPoint IT</title>
+  <meta name="description" content="Real-world network infrastructure and IT security work from AnchorPoint IT in Leavenworth, KS." />
+  <link rel="canonical" href="https://anchorpoint-it.com/blog.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── BLOG-SPECIFIC STYLES ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+
+    .blog-card {
+      background: var(--surface);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.22s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-card:hover { background: var(--surface2); }
+
+    .blog-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover::after { transform: scaleX(1); }
+
+    .blog-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .blog-tag::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    .blog-card h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .blog-card p {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 0;
+      flex: 1;
+      max-width: none;
+    }
+
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .blog-meta {
+      font-size: 0.76rem;
+      color: var(--muted);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      transition: gap 0.2s;
+    }
+
+    .blog-card:hover .blog-read-more { gap: 10px; }
+
+    .blog-read-more svg { width: 12px; height: 12px; stroke: var(--blue); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* Featured post — spans full width */
+    .blog-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      gap: 56px;
+      align-items: center;
+      padding: 48px 40px;
+    }
+
+    .blog-card.featured .blog-card-body { flex: 1; }
+
+    .blog-card.featured h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      margin-bottom: 14px;
+    }
+
+    .blog-card.featured .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--blue);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .blog-card.featured .blog-visual {
+      width: 200px;
+      flex-shrink: 0;
+      opacity: 0.18;
+      filter: drop-shadow(0 0 30px rgba(46,143,255,0.5));
+    }
+
+    /* Coming soon state */
+    .blog-coming-soon {
+      background: var(--surface);
+      border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .blog-coming-soon h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .blog-coming-soon p {
+      font-size: 0.83rem;
+      color: rgba(107,122,141,0.6);
+      max-width: none;
+      margin: 0;
+    }
+
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 680px) {
+      .blog-card.featured { flex-direction: column; gap: 24px; }
+      .blog-card.featured .blog-visual { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="page-hero">
+    <div class="grid-bg"></div>
+    <div class="container page-hero-inner">
+      <div class="page-hero-eyebrow">Real Work, Real Results</div>
+      <h1 class="page-hero-title">Case Studies &amp; Insights</h1>
+      <p class="page-hero-subtitle">A look at the network problems we've solved and the lessons learned along the way. No vendor fluff &mdash; just honest documentation of real engagements.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="ap-section">
+      <div class="container">
+
+        <div class="blog-grid">
+
+          <!-- FEATURED -->
+          <a href="#" class="blog-card featured" aria-label="Read: Church Network Rebuild">
+            <div class="blog-card-body">
+              <span class="featured-badge">Featured</span>
+              <div class="blog-tag">Network Infrastructure</div>
+              <h2>Church Campus Network Rebuild: From Consumer Gear to Reliable Infrastructure</h2>
+              <p>A 500-person church was running their entire campus off a single consumer router and three unmanaged switches. Sunday services regularly saw Wi-Fi dropout during the sermon stream. Here's how we fixed it &mdash; without an enterprise budget.</p>
+              <div class="blog-card-footer">
+                <span class="blog-meta">March 2026 &bull; 8 min read</span>
+                <span class="blog-read-more">Read case study <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+            <svg class="blog-visual" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+              <circle cx="150" cy="150" r="80" stroke="#2e8fff" stroke-width="2"/>
+              <circle cx="150" cy="150" r="120" stroke="#2e8fff" stroke-width="1" stroke-dasharray="4 8"/>
+              <circle cx="150" cy="70" r="14" fill="#0d1117" stroke="#2e8fff" stroke-width="2"/>
+              <circle cx="230" cy="150" r="14" fill="#0d1117" stroke="#2e8fff" stroke-width="2"/>
+              <circle cx="70"  cy="150" r="14" fill="#0d1117" stroke="#2e8fff" stroke-width="2"/>
+              <circle cx="150" cy="230" r="14" fill="#0d1117" stroke="#2e8fff" stroke-width="2"/>
+              <circle cx="150" cy="150" r="20" fill="#2e8fff" opacity="0.15"/>
+              <circle cx="150" cy="150" r="8"  fill="#2e8fff"/>
+              <line x1="150" y1="84"  x2="150" y2="130" stroke="#2e8fff" stroke-width="1.5"/>
+              <line x1="216" y1="150" x2="170" y2="150" stroke="#2e8fff" stroke-width="1.5"/>
+              <line x1="84"  y1="150" x2="130" y2="150" stroke="#2e8fff" stroke-width="1.5"/>
+              <line x1="150" y1="216" x2="150" y2="170" stroke="#2e8fff" stroke-width="1.5"/>
+            </svg>
+          </a>
+
+          <!-- CARD 2 -->
+          <a href="#" class="blog-card" aria-label="Read: VLAN segmentation for a nonprofit">
+            <div class="blog-tag">Security</div>
+            <h2>VLAN Segmentation for a Nonprofit: Separating Staff, Guest &amp; IoT Traffic</h2>
+            <p>A local nonprofit had staff laptops, donor kiosks, smart TVs, and guest Wi-Fi all on the same flat network. One compromised device could reach everything. We fixed that.</p>
+            <div class="blog-card-footer">
+              <span class="blog-meta">February 2026 &bull; 6 min read</span>
+              <span class="blog-read-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+
+          <!-- CARD 3 -->
+          <a href="#" class="blog-card" aria-label="Read: Firewall audit for a small business">
+            <div class="blog-tag">Firewall &amp; Security</div>
+            <h2>The Firewall That Wasn't: What We Found in a Small Business Security Audit</h2>
+            <p>They thought they had a firewall. They had a router with the default password and UPnP enabled. A quick audit turned into a full remediation project &mdash; and a much better night's sleep for the owner.</p>
+            <div class="blog-card-footer">
+              <span class="blog-meta">January 2026 &bull; 5 min read</span>
+              <span class="blog-read-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+
+          <!-- CARD 4 -->
+          <a href="#" class="blog-card" aria-label="Read: Wi-Fi dead zone elimination">
+            <div class="blog-tag">Wi-Fi</div>
+            <h2>Dead Zone Eliminated: Designing Wi-Fi Coverage for a Multi-Room Office</h2>
+            <p>Three access points in the wrong places, all on the same channel. We remapped the space, ran the cabling properly, and got full coverage &mdash; including the back conference room nobody could ever get signal in.</p>
+            <div class="blog-card-footer">
+              <span class="blog-meta">December 2025 &bull; 4 min read</span>
+              <span class="blog-read-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- COMING SOON -->
+        <div style="margin-top: 64px;">
+          <div class="section-label">Coming Soon</div>
+          <h2>More in the Pipeline</h2>
+          <p class="section-sub" style="margin-bottom: 0;">Engagements currently being documented for publication.</p>
+          <div class="upcoming-grid">
+            <div class="blog-coming-soon">
+              <h3>SD-WAN for a Multi-Site Church</h3>
+              <p>Connecting three campuses with centralized management and failover.</p>
+            </div>
+            <div class="blog-coming-soon">
+              <h3>Migrating Off a Legacy NVR</h3>
+              <p>Replacing an end-of-life security camera system with a modern, network-integrated solution.</p>
+            </div>
+            <div class="blog-coming-soon">
+              <h3>MDM Rollout for a Small Business</h3>
+              <p>Getting 15 employee devices enrolled and policy-managed without disrupting workflows.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="ap-section cta-section" style="padding-top: 40px;">
+      <div class="grid-bg"></div>
+      <div class="cta-glow"></div>
+      <div class="cta-inner">
+        <div class="section-label" style="justify-content:center;">Your Organization</div>
+        <h2>Sound Familiar?</h2>
+        <p>If any of these scenarios hit close to home, let's talk. A free consultation costs nothing and usually surfaces more than people expect.</p>
+        <div class="cta-actions">
+          <a href="consult.html" class="ap-btn ap-btn--primary">Book a Free Consult</a>
+          <a href="services.html" class="ap-btn ap-btn--ghost">View Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>

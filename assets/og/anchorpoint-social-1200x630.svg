@@ -1,0 +1,129 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg1" cx="30%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#0d1a2e"/>
+      <stop offset="100%" stop-color="#050708"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2e8fff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2e8fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a5fa8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1a5fa8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="60"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+
+  <!-- Ambient glows -->
+  <ellipse cx="300" cy="200" rx="500" ry="350" fill="url(#glow1)" filter="url(#blur1)"/>
+  <ellipse cx="900" cy="400" rx="400" ry="300" fill="url(#glow2)" filter="url(#blur2)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04" stroke="#2e8fff" stroke-width="1">
+    <line x1="0" y1="63"  x2="1200" y2="63"/>
+    <line x1="0" y1="126" x2="1200" y2="126"/>
+    <line x1="0" y1="189" x2="1200" y2="189"/>
+    <line x1="0" y1="252" x2="1200" y2="252"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="378" x2="1200" y2="378"/>
+    <line x1="0" y1="441" x2="1200" y2="441"/>
+    <line x1="0" y1="504" x2="1200" y2="504"/>
+    <line x1="0" y1="567" x2="1200" y2="567"/>
+    <line x1="63"  y1="0" x2="63"  y2="630"/>
+    <line x1="126" y1="0" x2="126" y2="630"/>
+    <line x1="189" y1="0" x2="189" y2="630"/>
+    <line x1="252" y1="0" x2="252" y2="630"/>
+    <line x1="315" y1="0" x2="315" y2="630"/>
+    <line x1="378" y1="0" x2="378" y2="630"/>
+    <line x1="441" y1="0" x2="441" y2="630"/>
+    <line x1="504" y1="0" x2="504" y2="630"/>
+    <line x1="567" y1="0" x2="567" y2="630"/>
+    <line x1="630" y1="0" x2="630" y2="630"/>
+    <line x1="693" y1="0" x2="693" y2="630"/>
+    <line x1="756" y1="0" x2="756" y2="630"/>
+    <line x1="819" y1="0" x2="819" y2="630"/>
+    <line x1="882" y1="0" x2="882" y2="630"/>
+    <line x1="945" y1="0" x2="945" y2="630"/>
+    <line x1="1008" y1="0" x2="1008" y2="630"/>
+    <line x1="1071" y1="0" x2="1071" y2="630"/>
+    <line x1="1134" y1="0" x2="1134" y2="630"/>
+  </g>
+
+  <!-- Decorative anchor (right side) -->
+  <g transform="translate(860, 115)" opacity="0.13">
+    <!-- shaft -->
+    <rect x="196" y="80" width="8" height="200" rx="4" fill="#c8d4e0"/>
+    <!-- crossbar -->
+    <rect x="140" y="150" width="120" height="8" rx="4" fill="#c8d4e0"/>
+    <!-- ring -->
+    <circle cx="200" cy="60" r="24" stroke="#c8d4e0" stroke-width="3" fill="none"/>
+    <circle cx="200" cy="60" r="10" fill="#c8d4e0"/>
+    <!-- flukes -->
+    <path d="M200 280 C160 300 120 310 100 300 L108 318 C130 330 170 320 200 300" fill="#2e8fff"/>
+    <path d="M200 280 C240 300 280 310 300 300 L292 318 C270 330 230 320 200 300" fill="#2e8fff"/>
+    <!-- circuit lines -->
+    <line x1="200" y1="60" x2="200" y2="290" stroke="#2e8fff" stroke-width="2"/>
+    <line x1="100" y1="170" x2="300" y2="170" stroke="#2e8fff" stroke-width="2"/>
+    <circle cx="60" cy="170" r="12" stroke="#2e8fff" stroke-width="2" fill="none"/>
+    <circle cx="340" cy="170" r="12" stroke="#2e8fff" stroke-width="2" fill="none"/>
+    <line x1="72" y1="170" x2="100" y2="170" stroke="#2e8fff" stroke-width="2"/>
+    <line x1="300" y1="170" x2="328" y2="170" stroke="#2e8fff" stroke-width="2"/>
+    <circle cx="148" cy="154" r="8" stroke="#2e8fff" stroke-width="2" fill="#050708"/>
+    <circle cx="252" cy="154" r="8" stroke="#2e8fff" stroke-width="2" fill="#050708"/>
+    <circle cx="200" cy="60" r="4" fill="#2e8fff"/>
+    <circle cx="60"  cy="170" r="4" fill="#2e8fff"/>
+    <circle cx="340" cy="170" r="4" fill="#2e8fff"/>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="180" width="4" height="80" rx="2" fill="#2e8fff" opacity="0.7"/>
+
+  <!-- Eyebrow text -->
+  <text x="100" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#2e8fff" letter-spacing="3" text-transform="uppercase">LEAVENWORTH, KS — LOCAL IT PARTNER</text>
+
+  <!-- Main headline -->
+  <text x="80" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#eef2f7" letter-spacing="-1">Grounded IT for</text>
+  <text x="80" y="395" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#2e8fff" letter-spacing="-1">Growing Organizations</text>
+
+  <!-- Subtext -->
+  <text x="82" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="300" fill="#c8d4e0">Security-focused network infrastructure and reliable IT support</text>
+  <text x="82" y="478" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="300" fill="#c8d4e0">for small businesses, nonprofits, and churches.</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="570" width="1200" height="60" fill="#0d1117"/>
+  <rect x="0" y="570" width="1200" height="1" fill="rgba(255,255,255,0.07)"/>
+
+  <!-- Logo mark area (simple anchor shape in bottom bar) -->
+  <g transform="translate(78, 584) scale(0.14)">
+    <rect x="196" y="80" width="8" height="130" rx="4" fill="#c8d4e0"/>
+    <rect x="155" y="140" width="90" height="6" rx="3" fill="#c8d4e0"/>
+    <circle cx="200" cy="60" r="18" stroke="#c8d4e0" stroke-width="2.5" fill="none"/>
+    <circle cx="200" cy="60" r="7" fill="#c8d4e0"/>
+    <path d="M200 210 C175 225 150 230 135 222 L140 234 C158 244 182 238 200 226" fill="#2e8fff"/>
+    <path d="M200 210 C225 225 250 230 265 222 L260 234 C242 244 218 238 200 226" fill="#2e8fff"/>
+  </g>
+
+  <!-- Brand name in bottom bar -->
+  <text x="104" y="608" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#eef2f7" letter-spacing="0.5">Anchorpoint<tspan fill="#2e8fff">-IT</tspan></text>
+
+  <!-- Divider -->
+  <rect x="248" y="584" width="1" height="32" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Tagline in bottom bar -->
+  <text x="264" y="604" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="400" fill="#6b7a8d">anchorpoint-it.com</text>
+
+  <!-- Right side pills -->
+  <rect x="820" y="588" width="110" height="24" rx="12" fill="rgba(46,143,255,0.12)" stroke="rgba(46,143,255,0.25)" stroke-width="1"/>
+  <text x="875" y="605" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#2e8fff" text-anchor="middle" letter-spacing="1">NETWORKS</text>
+
+  <rect x="942" y="588" width="100" height="24" rx="12" fill="rgba(46,143,255,0.12)" stroke="rgba(46,143,255,0.25)" stroke-width="1"/>
+  <text x="992" y="605" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#2e8fff" text-anchor="middle" letter-spacing="1">SECURITY</text>
+
+  <rect x="1054" y="588" width="106" height="24" rx="12" fill="rgba(46,143,255,0.12)" stroke="rgba(46,143,255,0.25)" stroke-width="1"/>
+  <text x="1107" y="605" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#2e8fff" text-anchor="middle" letter-spacing="1">SUPPORT</text>
+</svg>
