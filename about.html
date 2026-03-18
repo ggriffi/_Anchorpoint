@@ -1,115 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>About | AnchorPoint IT</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="assets/css/anchorpoint-it.css">
-    <style>
-        /* Editorial Side-by-Side Adjustment */
-        .editorial-container {
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            min-height: 500px;
-            /* Adjust based on preference */
-        }
-
-        .editorial-image {
-            flex: 1;
-            max-width: 45%;
-            /* Limits image to less than half the card width */
-            overflow: hidden;
-        }
-
-        .editorial-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /* Crops the image to fit the container precisely */
-            display: block;
-        }
-
-        .editorial-text {
-            flex: 1.2;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* Mobile Responsive: Stack them on top of each other on small screens */
-        @media (max-width: 768px) {
-            .editorial-container {
-                flex-direction: column;
-            }
-
-            .editorial-image {
-                max-width: 100%;
-                height: 300px;
-                /* Fixed height for mobile banner */
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — AnchorPoint IT</title>
+  <meta name="description" content="Led by Geoff Griffith, a Network Engineer focused on infrastructure and security. Local IT for Leavenworth, KS." />
+  <link rel="canonical" href="https://anchorpoint-it.com/about.html" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header class="ap-header">
-        <div class="ap-header-inner">
-            <a href="index.html" class="ap-brand">
-                <img src="assets/logo-1024.png" alt="Anchorpoint IT" class="ap-mark">
-                <div class="ap-brand-text">
-                    <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
-                    <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
-                </div>
-            </a>
-            <nav class="ap-nav">
-                <a href="services.html">Services</a>
-                <a href="about.html" class="active">About</a>
-                <a class="ap-btn ap-btn--primary" href="index.html#contact">Book a consult</a>
-            </nav>
-        </div>
-    </header>
+  <div id="site-header"></div>
 
-    <main class="wrap">
-        <article class="card" aria-label="About AnchorPoint IT">
-            <div class="editorial-container">
-                <div class="editorial-image">
-                    <img src="assets/about-feature.png" alt="Network Engineering Infrastructure" />
-                </div>
+  <div class="page-hero">
+    <div class="grid-bg"></div>
+    <div class="container page-hero-inner">
+      <div class="page-hero-eyebrow">Our Story</div>
+      <h1 class="page-hero-title">About AnchorPoint IT</h1>
+      <p class="page-hero-subtitle">Network &amp; infrastructure consulting built on a simple premise: local organizations deserve reliable, secure technology — without the enterprise price tag.</p>
+    </div>
+  </div>
 
-                <div class="editorial-text">
-                    <div class="ap-content">
-                        <h1>About AnchorPoint IT</h1>
-                        <p>
-                            Led by <strong>Geoff Griffith</strong>, a Network Engineer focusing on infrastructure and
-                            security, AnchorPoint IT provides grounded, reliable technology solutions for small
-                            businesses, nonprofits, and churches.
-                        </p>
-
-                        <h2>How we work</h2>
-                        <ul style="padding-left: 20px;">
-                            <li><strong>Listen & Audit:</strong> Identifying bottlenecks and risks before proposing
-                                solutions.</li>
-                            <li><strong>Simplify:</strong> Replacing "band-aid" fixes with reliable infrastructure.</li>
-                            <li><strong>Secure by Default:</strong> Baking security into the foundation of every build.
-                            </li>
-                        </ul>
-
-                        <div class="actions" style="justify-content: flex-start; padding-left: 0;">
-                            <a class="btn primary" href="mailto:contact@anchorpoint-it.com">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
+  <main>
+    <section class="content-section">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-visual">
+            <div class="about-card">
+              <div class="big-name">Geoff Griffith</div>
+              <div class="title">Network Engineer &amp; Founder</div>
+              <p class="bio">Geoff brings enterprise-level rigor to organizations that don't always have enterprise budgets. With deep experience in network infrastructure and security, he focuses on building solutions that actually hold up over time — not band-aids that need replacing next year.</p>
+              <div class="tag-row">
+                <span class="tag">Network Design</span>
+                <span class="tag">Firewall / Security</span>
+                <span class="tag">VLAN Architecture</span>
+                <span class="tag">Managed Support</span>
+                <span class="tag">Infrastructure Audit</span>
+                <span class="tag">Leavenworth, KS</span>
+              </div>
             </div>
+          </div>
+          <div class="about-text">
+            <div class="section-label">Philosophy</div>
+            <h2>Grounded. Reliable. Local.</h2>
+            <p>AnchorPoint IT started because small businesses, nonprofits, and churches were being underserved &mdash; stuck with either consumer-grade gear or overpriced MSP contracts that didn't fit their actual needs.</p>
+            <p>The anchor in our name isn't just decoration. It's a promise: to be a stable, grounded presence for your organization's technology. No upselling. No unnecessary complexity. Just honest advice and solid work.</p>
+            <p>Based in Leavenworth, KS, we serve the local community directly &mdash; someone who knows your building, your team, and your constraints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <footer class="micro">
-                <strong>AnchorPoint IT</strong> — Network & Infrastructure Consulting • Leavenworth, KS
-            </footer>
-        </article>
-    </main>
+    <section class="content-section ap-section--alt">
+      <div class="container">
+        <div class="section-label">Process</div>
+        <h2>How We Work</h2>
+        <div class="steps-row">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Listen &amp; Audit</h3>
+            <p>Identifying bottlenecks and risks before proposing solutions. We don't sell first.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Simplify</h3>
+            <p>Replacing band-aid fixes with reliable infrastructure that solves root problems.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Secure by Default</h3>
+            <p>Security baked into every build decision from the start, not retrofitted later.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <h3>Stay Engaged</h3>
+            <p>We remain your partner as your organization evolves and your needs change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ap-section cta-section">
+      <div class="grid-bg"></div>
+      <div class="cta-glow"></div>
+      <div class="cta-inner">
+        <div class="section-label" style="justify-content:center;">Get in Touch</div>
+        <h2>Start a Conversation</h2>
+        <p>Tell us what you're working with and what's not working. We'll take it from there.</p>
+        <div class="cta-actions">
+          <a href="consult.html" class="ap-btn ap-btn--primary">Book a Consult</a>
+          <a href="mailto:support@anchorpoint-it.com" class="ap-btn ap-btn--ghost">Email Directly</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/site.js"></script>
 </body>
-
 </html>
