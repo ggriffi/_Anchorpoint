@@ -46,6 +46,7 @@
       <a href="services.html" data-nav="services">Services</a>
       <a href="about.html" data-nav="about">About</a>
       <a href="blog.html" data-nav="blog">Case Studies</a>
+      <a href="index.html#downloads" data-nav="downloads">Downloads</a>
       <a class="ap-btn ap-btn--primary" href="consult.html">Book a Consult</a>
     </nav>
   </div>
@@ -239,6 +240,263 @@
       </div>
     </div>
   </section>
+
+  <!-- DOWNLOADS -->
+  <section class="ap-section ap-section--alt" id="downloads">
+    <div class="container">
+      <div class="section-label">Free Tools</div>
+      <h2>NetProbe — Network Analysis Utility</h2>
+      <p class="section-sub">A portable desktop network analysis tool built for IT pros. Ping, traceroute, MTR, port scan, DNS lookup, ARP scan, bandwidth testing &amp; more — all in one app. No install required.</p>
+
+      <div class="download-grid">
+
+        <div class="download-card">
+          <div class="download-card-header">
+            <div class="download-os-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="download-os-name">Windows</div>
+              <div class="download-os-sub">Executable · Run as Administrator</div>
+            </div>
+          </div>
+          <p class="download-desc">Single <code>.exe</code> — no Python required. Raw socket access for ICMP ping and packet capture. Includes bundled iperf3 for bandwidth testing.</p>
+          <ul class="download-features">
+            <li>Full L2–L7 network analysis</li>
+            <li>Packet capture &amp; decode</li>
+            <li>Continuous MTR dashboard</li>
+            <li>TCP bandwidth testing</li>
+          </ul>
+          <a href="https://drive.google.com/uc?export=download&id=1p2naoKLJNmo-l03Rmfrf9go0KHKqOFPh"
+             class="ap-btn ap-btn--primary download-btn"
+             data-platform="windows"
+             onclick="trackDownload()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download for Windows
+          </a>
+        </div>
+
+        <div class="download-card">
+          <div class="download-card-header">
+            <div class="download-os-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+              </svg>
+            </div>
+            <div>
+              <div class="download-os-name">Linux</div>
+              <div class="download-os-sub">Binary · Run with sudo for full features</div>
+            </div>
+          </div>
+          <p class="download-desc">Standalone Linux binary via PyInstaller. Run with <code>sudo</code> for ICMP + packet capture. Falls back gracefully without optional deps.</p>
+          <ul class="download-features">
+            <li>Full L2–L7 network analysis</li>
+            <li>Raw socket packet capture</li>
+            <li>ARP scan &amp; MAC discovery</li>
+            <li>Multi-target external monitor</li>
+          </ul>
+          <a href="https://drive.google.com/uc?export=download&id=1FLlrjeBmR1WYHVpMvZaZEWbBPApQcWnj"
+             class="ap-btn ap-btn--primary download-btn"
+             data-platform="linux"
+             onclick="trackDownload()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download for Linux
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Counter + GitHub link -->
+      <div class="download-meta">
+        <div class="download-counter">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span id="download-count">—</span> total downloads
+        </div>
+        <a href="https://github.com/ggriffi/_NetworkApp" target="_blank" rel="noopener" class="download-github-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          View source on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .download-card {
+      background: var(--surface);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: background 0.22s;
+    }
+
+    .download-card:hover { background: var(--surface2); }
+
+    .download-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .download-os-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(46,143,255,0.08);
+      border: 1px solid rgba(46,143,255,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .download-os-icon svg { width: 22px; height: 22px; stroke: var(--blue); }
+
+    .download-os-name {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .download-os-sub {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .download-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+
+    .download-desc code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.82rem;
+      background: rgba(46,143,255,0.1);
+      color: var(--blue);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    .download-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+    }
+
+    .download-features li {
+      font-size: 0.83rem;
+      color: var(--silver);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .download-features li::before {
+      content: '—';
+      color: var(--blue);
+      flex-shrink: 0;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+    }
+
+    .download-btn { width: 100%; justify-content: center; }
+
+    .download-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 4px 0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .download-counter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .download-counter svg { stroke: var(--blue); }
+
+    .download-counter #download-count {
+      color: var(--white);
+      font-size: 1.05rem;
+    }
+
+    .download-github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .download-github-link:hover { color: var(--white); }
+
+    @media (max-width: 680px) {
+      .download-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script>
+    (function() {
+      var STORAGE_KEY = 'netprobe-downloads';
+
+      function getCount() {
+        try {
+          return parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10);
+        } catch(e) { return 0; }
+      }
+
+      function setCount(n) {
+        try { localStorage.setItem(STORAGE_KEY, n); } catch(e) {}
+      }
+
+      function renderCount() {
+        var n = getCount();
+        var el = document.getElementById('download-count');
+        if (el) el.textContent = n.toLocaleString();
+      }
+
+      window.trackDownload = function() {
+        setCount(getCount() + 1);
+        setTimeout(renderCount, 100);
+      };
+
+      renderCount();
+    })();
+  </script>
 
   <!-- CTA -->
   <section class="ap-section cta-section">
