@@ -327,6 +327,20 @@
             </div>
           </a>
 
+          <!-- CARD 5 — NetProbe Dev Story -->
+          <a href="https://github.com/ggriffi/_NetworkApp/tree/main" target="_blank" rel="noopener noreferrer" class="blog-card" aria-label="Read: Building NetProbe">
+            <div class="blog-tag">Tools &amp; Development</div>
+            <h2>Building NetProbe: One Tool to Replace All the Tabs</h2>
+            <p>Every field tech knows the routine &mdash; ping in one terminal, traceroute in another, browser tabs open for DNS lookup, WHOIS, and SSL cert checking, and a $500/year license for anything that does it all in one place. NetProbe started as a frustration and turned into a fully-featured network analysis utility built from the ground up in Python.</p>
+            <p style="margin-top: 12px;">The core idea was simple: a single portable app covering the full OSI stack &mdash; ICMP ping with live RTT graphs, continuous MTR, threaded port scanning, ARP/L2 discovery, DNS with DoH comparison, SSL inspection, HTTP timing, WHOIS, packet capture, and bandwidth testing &mdash; without requiring a paid subscription or a dozen separate installs.</p>
+            <p style="margin-top: 12px;">Built on Python with a Tkinter GUI, the real engineering challenges came in the details. Raw socket access for ICMP requires elevated privileges on both Windows and Linux, and getting that to degrade gracefully took work. Bundling iperf3 and the Cygwin runtime alongside Scapy and a native packet capture stack into a single self-contained <code>.exe</code> via PyInstaller meant wrestling with dependency trees and binary paths. The architecture ended up clean: a <code>core/engine.py</code> handling all network operations in a threaded, callback-based model, and a <code>ui/</code> layer that stays completely decoupled from it.</p>
+            <p style="margin-top: 12px;">The result ships as a ~27 MB standalone executable on Windows and a single binary on Linux &mdash; no Python install, no dependencies to chase. Free to download.</p>
+            <div class="blog-card-footer">
+              <span class="blog-meta">March 2026 &bull; 7 min read</span>
+              <span class="blog-read-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+
         </div>
 
         <!-- COMING SOON -->
