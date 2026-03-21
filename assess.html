@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Free Security Assessment — AnchorPoint IT</title>
+  <meta name="description" content="Take our free 2-minute security assessment and find out how protected your organization really is." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assess.css" />
+</head>
+<body>
+
+  <header class="ap-header">
+    <div class="ap-header-inner">
+      <a href="index.html" class="ap-brand">
+        <picture>
+          <source type="image/webp" srcset="assets/logo-96.webp 96w, assets/logo-192.webp 192w" sizes="42px">
+          <img src="assets/logo-96.webp" width="42" height="42" alt="AnchorPoint IT" class="ap-mark" decoding="async">
+        </picture>
+        <div class="ap-brand-text">
+          <div class="ap-brand-name">Anchorpoint<span>-IT</span></div>
+          <div class="ap-brand-tagline">Grounded IT for Growing Organizations</div>
+        </div>
+      </a>
+      <a class="ap-btn ap-btn--ghost" href="https://anchorpoint-it.com/consult.html">Book a Consult</a>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <!-- ── SCREEN: INTRO ─────────────────────────────────────── -->
+    <section class="screen screen--intro active" id="screen-intro">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="intro-badge">Free Assessment</div>
+        <h1 class="intro-title">How Secure Is Your Organization?</h1>
+        <p class="intro-sub">Answer 15 quick questions and we'll show you exactly where you stand — and what to do about it. Takes about 2 minutes.</p>
+        <div class="intro-cats">
+          <div class="intro-cat"><span class="cat-icon">🔑</span> Passwords &amp; Auth</div>
+          <div class="intro-cat"><span class="cat-icon">🔄</span> Software Updates</div>
+          <div class="intro-cat"><span class="cat-icon">💾</span> Backups</div>
+          <div class="intro-cat"><span class="cat-icon">🌐</span> Network</div>
+          <div class="intro-cat"><span class="cat-icon">📧</span> Email &amp; Training</div>
+        </div>
+        <button class="ap-btn ap-btn--primary ap-btn--lg" id="btn-start">Start Free Assessment →</button>
+        <p class="intro-note">No sign-up required. Your answers stay in your browser.</p>
+      </div>
+    </section>
+
+    <!-- ── SCREEN: QUIZ ──────────────────────────────────────── -->
+    <section class="screen screen--quiz" id="screen-quiz">
+      <div class="container">
+        <div class="quiz-header">
+          <div class="quiz-progress-wrap">
+            <div class="quiz-progress-bar">
+              <div class="quiz-progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="quiz-progress-label" id="progress-label">Question 1 of 15</span>
+          </div>
+          <div class="quiz-category-badge" id="category-badge">Passwords &amp; Auth</div>
+        </div>
+
+        <div class="quiz-card" id="quiz-card">
+          <div class="question-number" id="q-number">01</div>
+          <h2 class="question-text" id="q-text"></h2>
+          <p class="question-why" id="q-why"></p>
+          <div class="answer-options" id="answer-options"></div>
+        </div>
+
+        <div class="quiz-nav">
+          <button class="ap-btn ap-btn--ghost" id="btn-back" disabled>← Back</button>
+          <button class="ap-btn ap-btn--primary" id="btn-next" disabled>Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SCREEN: BROWSER CHECK ─────────────────────────────── -->
+    <section class="screen screen--check" id="screen-check">
+      <div class="container">
+        <div class="check-wrap">
+          <div class="check-spinner" id="check-spinner" aria-hidden="true"></div>
+          <h2 class="check-title">Checking your browser environment…</h2>
+          <p class="check-sub">We're reading publicly available browser settings — no data leaves your device.</p>
+          <ul class="check-list" id="check-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SCREEN: RESULTS ───────────────────────────────────── -->
+    <section class="screen screen--results" id="screen-results">
+      <div class="container">
+
+        <div class="results-header">
+          <div class="results-score-wrap">
+            <svg class="score-ring" viewBox="0 0 120 120" aria-hidden="true">
+              <circle class="score-ring-track" cx="60" cy="60" r="52"/>
+              <circle class="score-ring-fill" id="score-ring-fill" cx="60" cy="60" r="52"
+                stroke-dasharray="326.7" stroke-dashoffset="326.7"/>
+            </svg>
+            <div class="score-inner">
+              <div class="score-number" id="score-number">--</div>
+              <div class="score-label">/ 100</div>
+            </div>
+          </div>
+          <div class="results-tier-wrap">
+            <div class="results-tier" id="results-tier">--</div>
+            <h2 class="results-headline" id="results-headline"></h2>
+            <p class="results-summary" id="results-summary"></p>
+          </div>
+        </div>
+
+        <h3 class="section-label">Category Breakdown</h3>
+        <div class="category-bars" id="category-bars"></div>
+
+        <h3 class="section-label">Top Recommendations</h3>
+        <div class="recommendations" id="recommendations"></div>
+
+        <div class="results-cta">
+          <h3 class="cta-title">Want a deeper look?</h3>
+          <p class="cta-body">AnchorPoint IT offers a free 30-minute consultation where we walk through your specific environment and build a prioritized action plan — no obligation.</p>
+          <a class="ap-btn ap-btn--primary ap-btn--lg" href="https://anchorpoint-it.com/consult.html">Book Your Free Consult →</a>
+          <button class="ap-btn ap-btn--ghost" id="btn-retake">Retake Assessment</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ap-footer">
+    <div class="container">
+      <p>© 2025 AnchorPoint IT · Leavenworth, KS · <a href="https://anchorpoint-it.com/legal/privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="assess.js"></script>
+</body>
+</html>
