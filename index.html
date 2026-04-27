@@ -121,22 +121,33 @@
   <!-- TRUST STRIP -->
   <div class="trust-strip">
     <div class="trust-item">
-      <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <span class="trust-label">Security-First Design</span>
+      <div class="trust-stat" data-count="5" data-suffix="+">5+</div>
+      <span class="trust-label">Projects Completed</span>
     </div>
     <div class="trust-item">
-      <div class="trust-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-      <span class="trust-label">Enterprise-Grade Networks</span>
+      <div class="trust-stat">3</div>
+      <span class="trust-label">Verticals Served</span>
     </div>
     <div class="trust-item">
-      <div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-      <span class="trust-label">Reliable Local Support</span>
+      <div class="trust-stat">100<span style="font-size:0.7em">%</span></div>
+      <span class="trust-label">Local &amp; On-Site</span>
     </div>
     <div class="trust-item">
-      <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-      <span class="trust-label">Small Business Focused</span>
+      <div class="trust-stat" data-count="1" data-suffix=" Free Tool">1 Free Tool</div>
+      <span class="trust-label">Open to Download</span>
     </div>
   </div>
+
+  <style>
+    .trust-stat {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--blue);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+  </style>
 
   <!-- SERVICES -->
   <section class="ap-section" id="services">
@@ -213,6 +224,227 @@
       </div>
     </div>
   </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section class="ap-section ap-section--alt" id="portfolio">
+    <div class="container">
+      <div class="section-label">Portfolio</div>
+      <h2>Recent Work &amp; Results</h2>
+      <p class="section-sub">A sample of real engagements &mdash; what broke, what we built, and what it fixed.</p>
+
+      <div class="portfolio-grid">
+
+        <a href="blog.html" class="portfolio-card fade-up">
+          <div class="portfolio-tag">Network Infrastructure</div>
+          <h3>Church Campus Network Rebuild</h3>
+          <p>A 500-person church running their entire campus off a single consumer router. We rebuilt from scratch &mdash; enterprise-grade gear, no enterprise budget.</p>
+          <div class="portfolio-card-footer">
+            <span class="portfolio-outcome">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Reliable streams, zero Sunday dropouts
+            </span>
+            <span class="portfolio-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a href="blog.html" class="portfolio-card fade-up delay-1">
+          <div class="portfolio-tag">Security</div>
+          <h3>Nonprofit VLAN Segmentation</h3>
+          <p>Staff laptops, donor kiosks, smart TVs, and guest Wi-Fi all on one flat network. One compromised device could reach everything. We fixed that.</p>
+          <div class="portfolio-card-footer">
+            <span class="portfolio-outcome">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Full traffic isolation across all zones
+            </span>
+            <span class="portfolio-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a href="blog.html" class="portfolio-card fade-up delay-2">
+          <div class="portfolio-tag">Tools &amp; Dev</div>
+          <h3>NetProbe — Network Analysis Utility</h3>
+          <p>Built a portable, full-stack network tool from scratch: ping, MTR, port scan, DNS, packet capture, bandwidth testing &mdash; one app, no subscription.</p>
+          <div class="portfolio-card-footer">
+            <span class="portfolio-outcome">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              27 MB standalone, free to download
+            </span>
+            <span class="portfolio-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <a href="https://kingdomkidssafari.com" target="_blank" rel="noopener noreferrer" class="portfolio-card fade-up delay-3">
+          <div class="portfolio-tag portfolio-tag--green">Web Design</div>
+          <h3>Kingdom Kids Safari</h3>
+          <p>Full website design and build for a children's Christian education platform. Safari-themed UI with a store, interactive games, video library, and daily devotional &mdash; built to be engaging for kids and easy for parents to navigate.</p>
+          <div class="portfolio-card-footer">
+            <span class="portfolio-outcome">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Live at kingdomkidssafari.com
+            </span>
+            <span class="portfolio-more">Visit
+              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="portfolio-cta">
+        <a href="blog.html" class="ap-btn ap-btn--ghost">
+          View All Case Studies
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    .portfolio-card {
+      background: var(--surface);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.22s;
+    }
+
+    .portfolio-card:hover { background: var(--surface2); }
+
+    .portfolio-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--blue), transparent);
+      transform: scaleX(0);
+      transition: transform 0.35s ease;
+    }
+
+    .portfolio-card:hover::before { transform: scaleX(1); }
+
+    .portfolio-tag {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .portfolio-tag::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    .portfolio-tag--green { color: #3ecf8e; }
+    .portfolio-tag--green::before { background: #3ecf8e; }
+
+    .portfolio-card:has(.portfolio-tag--green)::before {
+      background: linear-gradient(90deg, transparent, #3ecf8e, transparent);
+    }
+
+    .portfolio-card h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .portfolio-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 0;
+      max-width: none;
+    }
+
+    .portfolio-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-outcome {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.77rem;
+      color: #3ecf8e;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .portfolio-outcome svg {
+      width: 13px; height: 13px;
+      stroke: #3ecf8e; fill: none;
+      stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .portfolio-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      transition: gap 0.2s;
+      flex-shrink: 0;
+    }
+
+    .portfolio-card:hover .portfolio-more { gap: 9px; }
+
+    .portfolio-more svg {
+      width: 12px; height: 12px;
+      stroke: var(--blue); fill: none;
+      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .portfolio-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 640px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 
   <!-- ABOUT PREVIEW -->
   <section class="ap-section" id="about-preview">
