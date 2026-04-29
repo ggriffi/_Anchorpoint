@@ -72,568 +72,257 @@
 </script>
 
   <!-- HERO -->
-  <section class="ap-hero-section">
+  <section class="ap-hero-section ap-hero--slim">
     <div class="grid-bg"></div>
     <div class="hero-glow"></div>
-
     <div class="ap-hero-content">
       <div class="hero-eyebrow fade-up">
         geoff@anchorpoint-it &middot; Leavenworth, KS<span class="cursor"></span>
       </div>
-      <h1 class="ap-h1 fade-up delay-1">I fix networks.<br><em>Build them right. Stay local.</em></h1>
-      <p class="hero-tagline fade-up delay-2">Networking &middot; Security &middot; Web &mdash; honest work, no runaround.</p>
-      <p class="ap-hero-sub fade-up delay-3">I'm Geoff. I handle IT for small businesses, churches, and nonprofits in Leavenworth, KS. One person. One point of contact. I show up in person and I answer when you call.</p>
-      <div class="ap-hero-actions fade-up delay-4">
-        <a href="consult.html" class="ap-btn ap-btn--primary">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Book a Consult
-        </a>
-        <a href="services.html" class="ap-btn ap-btn--ghost">
-          What I Do
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="assess.html" class="ap-btn ap-btn--ghost">
-          Free Assessment
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Network topology visualization -->
-    <svg class="hero-visual" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="scan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#2e8fff" stop-opacity="0"/>
-          <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="#2e8fff" stop-opacity="0"/>
-        </linearGradient>
-        <path id="lp-top" d="M250 208 L250 105"/>
-        <path id="lp-tr"  d="M264 219 L362 163"/>
-        <path id="lp-br"  d="M268 268 L362 337"/>
-        <path id="lp-bot" d="M250 292 L250 395"/>
-        <path id="lp-bl"  d="M232 268 L138 337"/>
-        <path id="lp-tl"  d="M236 219 L138 163"/>
-        <filter id="glow-sm"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-
-      <!-- Outer scan ring -->
-      <circle cx="250" cy="250" r="228" stroke="rgba(46,143,255,0.05)" stroke-width="1"/>
-      <circle cx="250" cy="250" r="228" stroke="url(#scan-grad)" stroke-width="1.5" stroke-dasharray="70 386">
-        <animateTransform attributeName="transform" type="rotate" from="0 250 250" to="360 250 250" dur="9s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- Mid ring dashed -->
-      <circle cx="250" cy="250" r="162" stroke="rgba(46,143,255,0.08)" stroke-width="1" stroke-dasharray="4 10"/>
-
-      <!-- Connection lines -->
-      <line x1="250" y1="208" x2="250" y2="105"  stroke="#2e8fff" stroke-width="1" opacity="0.18"/>
-      <line x1="264" y1="219" x2="362" y2="163"  stroke="#2e8fff" stroke-width="1" opacity="0.18"/>
-      <line x1="268" y1="268" x2="362" y2="337"  stroke="#2e8fff" stroke-width="1" opacity="0.18"/>
-      <line x1="250" y1="292" x2="250" y2="395"  stroke="#2e8fff" stroke-width="1" opacity="0.18"/>
-      <line x1="232" y1="268" x2="138" y2="337"  stroke="#2e8fff" stroke-width="1" opacity="0.18"/>
-      <line x1="236" y1="219" x2="138" y2="163"  stroke="#2e8fff" stroke-width="1" opacity="0.18"/>
-
-      <!-- Data packets -->
-      <circle r="2.5" fill="#00d4ff" filter="url(#glow-sm)"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#lp-top"/></animateMotion></circle>
-      <circle r="2.5" fill="#2e8fff" filter="url(#glow-sm)"><animateMotion dur="3s" repeatCount="indefinite" begin="0.9s"><mpath href="#lp-tr"/></animateMotion></circle>
-      <circle r="2.5" fill="#00e5a0" filter="url(#glow-sm)"><animateMotion dur="2.7s" repeatCount="indefinite" begin="0.4s"><mpath href="#lp-bot"/></animateMotion></circle>
-      <circle r="2.5" fill="#00d4ff" filter="url(#glow-sm)"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s"><mpath href="#lp-bl"/></animateMotion></circle>
-      <circle r="2.5" fill="#2e8fff" filter="url(#glow-sm)"><animateMotion dur="2.9s" repeatCount="indefinite" begin="0.6s"><mpath href="#lp-tl"/></animateMotion></circle>
-
-      <!-- Center node: firewall -->
-      <circle cx="250" cy="250" r="42" fill="rgba(46,143,255,0.04)" stroke="rgba(46,143,255,0.35)" stroke-width="1.5"/>
-      <circle cx="250" cy="250" r="26" fill="rgba(46,143,255,0.08)">
-        <animate attributeName="r" values="24;29;24" dur="3.2s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.2s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Shield icon -->
-      <path d="M250 235 L263 242 L263 254 C263 264 257 272 250 275 C243 272 237 264 237 254 L237 242 Z" fill="rgba(46,143,255,0.2)" stroke="#2e8fff" stroke-width="1.5"/>
-      <path d="M244 255 L248 259 L257 250" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-
-      <!-- Top node: server -->
-      <circle cx="250" cy="94"  r="21" fill="rgba(0,212,255,0.04)" stroke="#00d4ff" stroke-width="1.5"/>
-      <rect x="242" y="86" width="16" height="12" rx="2" fill="rgba(0,212,255,0.15)" stroke="#00d4ff" stroke-width="1"/>
-      <rect x="242" y="101" width="16" height="4"  rx="1" fill="rgba(0,212,255,0.1)"  stroke="#00d4ff" stroke-width="0.8"/>
-
-      <!-- Top-right node: client -->
-      <circle cx="368" cy="155" r="21" fill="rgba(46,143,255,0.04)" stroke="#2e8fff" stroke-width="1.5"/>
-      <rect x="360" y="147" width="16" height="11" rx="2" fill="rgba(46,143,255,0.15)" stroke="#2e8fff" stroke-width="1"/>
-      <line x1="360" y1="161" x2="376" y2="161" stroke="#2e8fff" stroke-width="1"/>
-
-      <!-- Bottom-right node: IoT/camera -->
-      <circle cx="368" cy="345" r="21" fill="rgba(46,143,255,0.04)" stroke="#2e8fff" stroke-width="1.5"/>
-      <circle cx="368" cy="345" r="7"  fill="rgba(46,143,255,0.15)" stroke="#2e8fff" stroke-width="1"/>
-      <circle cx="368" cy="345" r="2.5" fill="#2e8fff"/>
-
-      <!-- Bottom node: internet/cloud -->
-      <circle cx="250" cy="406" r="21" fill="rgba(0,229,160,0.04)" stroke="#00e5a0" stroke-width="1.5"/>
-      <path d="M240 408 C240 403 245 400 250 402 C252 398 258 398 260 402 C264 401 267 405 265 408 Z" fill="rgba(0,229,160,0.2)" stroke="#00e5a0" stroke-width="1"/>
-
-      <!-- Bottom-left node: switch -->
-      <circle cx="132" cy="345" r="21" fill="rgba(46,143,255,0.04)" stroke="#2e8fff" stroke-width="1.5"/>
-      <rect x="124" y="338" width="16" height="14" rx="2" fill="rgba(46,143,255,0.15)" stroke="#2e8fff" stroke-width="1"/>
-      <line x1="127" y1="342" x2="140" y2="342" stroke="#2e8fff" stroke-width="0.8"/>
-      <line x1="127" y1="345" x2="140" y2="345" stroke="#2e8fff" stroke-width="0.8"/>
-      <line x1="127" y1="348" x2="134" y2="348" stroke="#2e8fff" stroke-width="0.8"/>
-
-      <!-- Top-left node: AP/router -->
-      <circle cx="132" cy="155" r="21" fill="rgba(0,212,255,0.04)" stroke="#00d4ff" stroke-width="1.5"/>
-      <path d="M126 155 C126 149 138 149 138 155" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round"/>
-      <path d="M128 157 C128 153 136 153 136 157" stroke="#00d4ff" stroke-width="1.2" stroke-linecap="round"/>
-      <circle cx="132" cy="159" r="2" fill="#00d4ff"/>
-
-      <!-- Status dots (blinking) -->
-      <circle cx="263" cy="81"  r="3" fill="#00e5a0"><animate attributeName="opacity" values="1;0.2;1" dur="1.9s" repeatCount="indefinite" begin="0s"/></circle>
-      <circle cx="381" cy="143" r="3" fill="#00e5a0"><animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite" begin="0.5s"/></circle>
-      <circle cx="381" cy="333" r="3" fill="#f59e0b"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.9s"/></circle>
-      <circle cx="263" cy="418" r="3" fill="#00e5a0"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite" begin="0.2s"/></circle>
-      <circle cx="119" cy="333" r="3" fill="#00e5a0"><animate attributeName="opacity" values="1;0.2;1" dur="2s"   repeatCount="indefinite" begin="0.7s"/></circle>
-      <circle cx="119" cy="143" r="3" fill="#00e5a0"><animate attributeName="opacity" values="1;0.2;1" dur="2.6s" repeatCount="indefinite" begin="1.1s"/></circle>
-    </svg>
-
-    <!-- Floating terminal card -->
-    <div class="hero-terminal" aria-hidden="true">
-      <div class="t-bar">
-        <span class="t-dot"></span><span class="t-dot"></span><span class="t-dot"></span>
-        <span class="t-title">netprobe — live scan</span>
-      </div>
-      <div class="t-body">
-        <p><span class="t-prompt">$</span> netprobe scan 192.168.1.0/24</p>
-        <p class="t-ok">✓ 14 hosts discovered</p>
-        <p><span class="t-dim">firewall......</span><span class="t-ok">ACTIVE</span></p>
-        <p><span class="t-dim">open ports....</span><span class="t-hi">22 &nbsp;443</span></p>
-        <p><span class="t-dim">threats........</span><span class="t-ok">0 critical</span></p>
-        <p><span class="t-prompt">$</span> <span class="t-cur"></span></p>
+      <h1 class="ap-h1 fade-up delay-1">I fix networks.<br><em>Build them right.</em><br>Stay local.</h1>
+      <p class="ap-hero-sub fade-up delay-2">I handle IT for small businesses, churches, and nonprofits in Leavenworth, KS. One person — no call center, no ticket queue. I show up in person and I answer when you call.</p>
+      <div class="ap-hero-actions fade-up delay-3">
+        <a href="consult.html" class="ap-btn ap-btn--primary">Let's Talk</a>
+        <a href="about.html" class="ap-btn ap-btn--ghost">Who I Am</a>
       </div>
     </div>
   </section>
 
-  <style>
-    /* Hero tagline */
-    .hero-tagline {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      color: var(--cyan);
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
-
-    /* Floating terminal */
-    .hero-terminal {
-      position: absolute;
-      right: clamp(10px, 5vw, 52px);
-      bottom: 10%;
-      width: 272px;
-      background: rgba(4,6,11,0.92);
-      border: 1px solid rgba(46,143,255,0.22);
-      border-radius: 10px;
-      overflow: hidden;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 8px 48px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,212,255,0.04);
-      z-index: 3;
-    }
-    .t-bar {
-      display: flex; align-items: center; gap: 6px;
-      padding: 10px 14px;
-      background: rgba(255,255,255,0.03);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .t-dot {
-      width: 9px; height: 9px; border-radius: 50%;
-      background: rgba(255,255,255,0.12);
-    }
-    .t-dot:nth-child(1) { background: #ff5f57; }
-    .t-dot:nth-child(2) { background: #febc2e; }
-    .t-dot:nth-child(3) { background: #28c840; }
-    .t-title {
-      font-family: var(--mono); font-size: 0.65rem;
-      color: var(--muted); letter-spacing: 0.04em; margin-left: 4px;
-    }
-    .t-body {
-      padding: 14px 16px;
-      display: flex; flex-direction: column; gap: 5px;
-    }
-    .t-body p {
-      font-family: var(--mono); font-size: 0.72rem; line-height: 1.4;
-      color: var(--silver); margin: 0; max-width: none;
-      display: flex; align-items: baseline; gap: 4px;
-    }
-    .t-prompt { color: var(--cyan); flex-shrink: 0; }
-    .t-dim { color: var(--muted); }
-    .t-ok { color: #00e5a0; }
-    .t-hi { color: var(--cyan); }
-    .t-cur {
-      display: inline-block; width: 6px; height: 12px;
-      background: var(--cyan); border-radius: 1px;
-      animation: blink 1.1s step-end infinite;
-    }
-
-    @media (max-width: 900px) {
-      .hero-terminal { display: none; }
-    }
-  </style>
-
-  <!-- TRUST STRIP -->
-  <div class="trust-strip">
-    <div class="trust-item">
-      <div class="trust-stat" data-count="5" data-suffix="+">5+</div>
-      <span class="trust-label">Local Builds Done</span>
-    </div>
-    <div class="trust-item">
-      <div class="trust-stat">1</div>
-      <span class="trust-label">Point of Contact — Me</span>
-    </div>
-    <div class="trust-item">
-      <div class="trust-stat">100<span style="font-size:0.7em">%</span></div>
-      <span class="trust-label">On-Site, In Person</span>
-    </div>
-    <div class="trust-item">
-      <div class="trust-stat" data-count="1" data-suffix=" Free Tool">1 Free Tool</div>
-      <span class="trust-label">Open to Download</span>
-    </div>
-  </div>
-
-  <style>
-    .trust-stat {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      color: var(--blue);
-      line-height: 1;
-      letter-spacing: 0.02em;
-    }
-  </style>
-
-  <!-- SERVICES -->
+  <!-- WHAT I DO -->
   <section class="ap-section" id="services">
     <div class="container">
-      <div class="section-label">What I Do</div>
-      <h2>Here's What<br><em>I Actually Do</em></h2>
-      <p class="section-sub">Networks, security, and web. I keep it focused because that's what I'm good at and what actually helps.</p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <span class="service-num">01</span>
-          <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <h3>Network Infrastructure</h3>
-          <p>Your network is either working or it isn't. I design them so they do — proper gear, proper layout, no guessing and no band-aids.</p>
-          <ul class="service-bullets">
+      <h2>What I do</h2>
+      <div class="work-areas">
+        <div class="work-area">
+          <h3>Networks</h3>
+          <p>Your network is either working or it isn't. I build them so they do — VLANs, whole-building Wi-Fi, switching and routing done properly. Not patched together, not consumer gear that falls over.</p>
+          <ul class="work-list">
             <li>VLANs so your devices aren't sharing everything</li>
             <li>Wi-Fi that covers the whole building</li>
             <li>Switching and routing done right the first time</li>
           </ul>
         </div>
-        <div class="service-card">
-          <span class="service-num">02</span>
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3>Security &amp; Firewalls</h3>
-          <p>I build security in from the start — not something you bolt on after something goes wrong.</p>
-          <ul class="service-bullets">
+        <div class="work-area">
+          <h3>Security</h3>
+          <p>I build security in from the start — not something you bolt on after something goes wrong. If your network has gaps, I'll find them before someone else does.</p>
+          <ul class="work-list">
             <li>Firewall setup and management</li>
             <li>Endpoint policies that actually protect</li>
             <li>Monitoring so you're not flying blind</li>
           </ul>
         </div>
-        <div class="service-card">
-          <span class="service-num">03</span>
-          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg></div>
-          <h3>Managed IT Support</h3>
-          <p>If something breaks, you call me. Not a ticket system. Not a bot. Me — and I actually pick up.</p>
-          <ul class="service-bullets">
+        <div class="work-area">
+          <h3>IT Support</h3>
+          <p>Something breaks — you call me. Not a ticket system, not a bot. Me. I know your setup and I'm not starting from scratch every time.</p>
+          <ul class="work-list">
             <li>Remote and on-site support</li>
             <li>Tech planning that fits your budget</li>
             <li>Vendor wrangling so you don't have to</li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
-  <section class="ap-section ap-section--alt" id="process">
-    <div class="container">
-      <div class="section-label">How I Work</div>
-      <h2>How I<br><em>Actually Work</em></h2>
-      <p class="section-sub">I don't pitch before I understand. I look at what's actually broken before I touch anything.</p>
-      <div class="steps-row">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3>I Listen First</h3>
-          <p>I want to understand your setup before I recommend anything. Most problems have a simple fix — if you actually know what's wrong.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>I Fix the Real Problem</h3>
-          <p>No patching over it. Band-aids get replaced with something solid that you won't have to redo next year.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3>Security's Baked In</h3>
-          <p>I don't add it as an afterthought. Every build I do starts with it — because retrofitting security is twice the work.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h3>I Don't Disappear</h3>
-          <p>After the job's done, I'm still your guy. Call me when something comes up. That's the whole point of working with a local.</p>
-        </div>
+      <div class="work-areas-footer">
+        <a href="services.html" class="ap-btn ap-btn--ghost">Full breakdown of services</a>
       </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO PREVIEW -->
-  <section class="ap-section ap-section--alt" id="portfolio">
+  <!-- SOME WORK I'VE DONE -->
+  <section class="ap-section ap-section--alt" id="work">
     <div class="container">
-      <div class="section-label">Portfolio</div>
-      <h2>Recent Work &amp; Results</h2>
-      <p class="section-sub">A sample of real engagements &mdash; what broke, what we built, and what it fixed.</p>
-
-      <div class="portfolio-grid">
-
-        <a href="blog.html" class="portfolio-card fade-up">
-          <div class="portfolio-tag">Network Infrastructure</div>
-          <h3>Church Campus Network Rebuild</h3>
-          <p>A 500-person church running their entire campus off a single consumer router. I rebuilt it from scratch &mdash; proper gear, proper design, without a massive budget.</p>
-          <div class="portfolio-card-footer">
-            <span class="portfolio-outcome">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Reliable streams, zero Sunday dropouts
-            </span>
-            <span class="portfolio-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      <h2>Some work<br><em>I've done</em></h2>
+      <div class="stories">
+        <a href="blog.html" class="story fade-up">
+          <div class="story-meta">Network &middot; Church</div>
+          <div class="story-body">
+            <h3>500-person church, one consumer router</h3>
+            <p>Sunday streams dropping every week. I rebuilt the whole network from scratch — proper gear, proper VLANs, no dead zones. Zero dropouts since.</p>
           </div>
+          <span class="story-link">Read →</span>
         </a>
-
-        <a href="blog.html" class="portfolio-card fade-up delay-1">
-          <div class="portfolio-tag">Security</div>
-          <h3>Nonprofit VLAN Segmentation</h3>
-          <p>Staff laptops, donor kiosks, smart TVs, and guest Wi-Fi all on one flat network. One compromised device could reach everything. We fixed that.</p>
-          <div class="portfolio-card-footer">
-            <span class="portfolio-outcome">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Full traffic isolation across all zones
-            </span>
-            <span class="portfolio-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <a href="blog.html" class="story fade-up delay-1">
+          <div class="story-meta">Security &middot; Nonprofit</div>
+          <div class="story-body">
+            <h3>Every device on one flat network</h3>
+            <p>Staff laptops, donor kiosks, smart TVs, and guest Wi-Fi all reachable from each other. One compromised device could've touched everything. Fixed with proper VLAN segmentation.</p>
           </div>
+          <span class="story-link">Read →</span>
         </a>
-
-        <a href="blog.html" class="portfolio-card fade-up delay-2">
-          <div class="portfolio-tag">Tools &amp; Dev</div>
-          <h3>NetProbe — Network Analysis Utility</h3>
-          <p>Built a portable, full-stack network tool from scratch: ping, MTR, port scan, DNS, packet capture, bandwidth testing &mdash; one app, no subscription.</p>
-          <div class="portfolio-card-footer">
-            <span class="portfolio-outcome">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              27 MB standalone, free to download
-            </span>
-            <span class="portfolio-more">Read <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <a href="blog.html" class="story fade-up delay-2">
+          <div class="story-meta">Tools &middot; Dev</div>
+          <div class="story-body">
+            <h3>Built a network analysis tool from scratch</h3>
+            <p>Needed a portable all-in-one network tool — ping, MTR, port scan, DNS, packet capture, bandwidth testing. Built it myself. Free to download below.</p>
           </div>
+          <span class="story-link">Read →</span>
         </a>
-
-        <a href="https://kingdomkidssafari.com" target="_blank" rel="noopener noreferrer" class="portfolio-card fade-up delay-3">
-          <div class="portfolio-tag portfolio-tag--green">Web Design</div>
-          <h3>Kingdom Kids Safari</h3>
-          <p>Full website design and build for a children's Christian education platform. Safari-themed UI with a store, interactive games, video library, and daily devotional &mdash; built to be engaging for kids and easy for parents to navigate.</p>
-          <div class="portfolio-card-footer">
-            <span class="portfolio-outcome">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Live at kingdomkidssafari.com
-            </span>
-            <span class="portfolio-more">Visit
-              <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </span>
+        <a href="https://kingdomkidssafari.com" target="_blank" rel="noopener noreferrer" class="story fade-up delay-3">
+          <div class="story-meta">Web Design</div>
+          <div class="story-body">
+            <h3>Kingdom Kids Safari</h3>
+            <p>Full site design and build for a children's Christian education platform — store, interactive games, video library, daily devotional. Live at kingdomkidssafari.com.</p>
           </div>
+          <span class="story-link">Visit →</span>
         </a>
-
       </div>
+    </div>
+  </section>
 
-      <div class="portfolio-cta">
-        <a href="blog.html" class="ap-btn ap-btn--ghost">
-          View All Case Studies
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+  <!-- WHO I AM -->
+  <section class="ap-section personal-section" id="about-preview">
+    <div class="container">
+      <div class="personal-inner">
+        <p class="personal-lead">I started this because local organizations were getting a bad deal.</p>
+        <p>Either cheap gear that falls apart, or bloated MSP contracts with an 800 number nobody answers. Good organizations stuck with bad setups that nobody was fixing.</p>
+        <p>I'm not an MSP. I'm one person. I know your building, your team, and your constraints. You deal with me directly, every time — and I'm still around after the job's done.</p>
+        <a href="about.html" class="personal-link">More about me →</a>
       </div>
     </div>
   </section>
 
   <style>
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-top: 48px;
-    }
+    .ap-hero--slim { min-height: 78vh; }
 
-    .portfolio-card {
-      background: var(--surface);
-      padding: 32px 28px;
+    /* What I do — plain columns */
+    .work-areas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 56px;
+      margin-top: 44px;
+    }
+    .work-area h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--white);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(46,143,255,0.18);
+    }
+    .work-area > p {
+      font-size: 0.9rem;
+      color: var(--silver);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+    .work-list {
+      list-style: none;
+      padding: 0;
       display: flex;
       flex-direction: column;
+      gap: 7px;
+    }
+    .work-list li {
+      font-size: 0.83rem;
+      color: var(--muted);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .work-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+    }
+    .work-areas-footer {
+      margin-top: 52px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Stories — list format */
+    .stories { margin-top: 48px; }
+    .story {
+      display: grid;
+      grid-template-columns: 140px 1fr 60px;
+      gap: 32px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
       text-decoration: none;
       color: inherit;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.22s;
     }
-
-    .portfolio-card:hover { background: var(--surface2); }
-
-    .portfolio-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--blue), transparent);
-      transform: scaleX(0);
-      transition: transform 0.35s ease;
-    }
-
-    .portfolio-card:hover::before { transform: scaleX(1); }
-
-    .portfolio-tag {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 600;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .story:first-child { border-top: 1px solid var(--border); }
+    .story:hover .story-body h3 { color: var(--cyan); }
+    .story-meta {
+      font-family: var(--mono);
+      font-size: 0.68rem;
       color: var(--blue);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding-top: 3px;
     }
-
-    .portfolio-tag::before {
-      content: '';
-      display: block;
-      width: 12px;
-      height: 2px;
-      background: var(--blue);
-      border-radius: 2px;
-    }
-
-    .portfolio-tag--green { color: #3ecf8e; }
-    .portfolio-tag--green::before { background: #3ecf8e; }
-
-    .portfolio-card:has(.portfolio-tag--green)::before {
-      background: linear-gradient(90deg, transparent, #3ecf8e, transparent);
-    }
-
-    .portfolio-card h3 {
+    .story-body h3 {
       font-family: 'Rajdhani', sans-serif;
       font-weight: 700;
-      font-size: 1.15rem;
-      line-height: 1.2;
+      font-size: 1.1rem;
       color: var(--white);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      transition: color 0.2s;
     }
-
-    .portfolio-card p {
-      font-size: 0.85rem;
+    .story-body p {
+      font-size: 0.86rem;
       color: var(--muted);
       line-height: 1.65;
-      flex: 1;
-      margin-bottom: 0;
+      margin: 0;
       max-width: none;
     }
-
-    .portfolio-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .portfolio-outcome {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.77rem;
-      color: #3ecf8e;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-
-    .portfolio-outcome svg {
-      width: 13px; height: 13px;
-      stroke: #3ecf8e; fill: none;
-      stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;
-      flex-shrink: 0;
-    }
-
-    .portfolio-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
+    .story-link {
       font-family: 'Rajdhani', sans-serif;
       font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
       color: var(--blue);
-      transition: gap 0.2s;
-      flex-shrink: 0;
+      white-space: nowrap;
+      padding-top: 3px;
+      text-align: right;
     }
 
-    .portfolio-card:hover .portfolio-more { gap: 9px; }
-
-    .portfolio-more svg {
-      width: 12px; height: 12px;
-      stroke: var(--blue); fill: none;
-      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+    /* Personal section */
+    .personal-section {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-
-    .portfolio-cta {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
+    .personal-inner { max-width: 660px; }
+    .personal-lead {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 24px;
     }
+    .personal-inner p {
+      font-size: 0.96rem;
+      color: var(--silver);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      max-width: none;
+    }
+    .personal-link {
+      display: inline-block;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      color: var(--cyan);
+      text-decoration: none;
+      margin-top: 8px;
+    }
+    .personal-link:hover { color: var(--white); }
 
-    @media (max-width: 640px) {
-      .portfolio-grid { grid-template-columns: 1fr; }
+    @media (max-width: 860px) {
+      .work-areas { grid-template-columns: 1fr; gap: 40px; }
+      .story { grid-template-columns: 1fr auto; }
+      .story-meta { display: none; }
+    }
+    @media (max-width: 480px) {
+      .story { grid-template-columns: 1fr; }
+      .story-link { display: none; }
     }
   </style>
-
-  <!-- ABOUT PREVIEW -->
-  <section class="ap-section" id="about-preview">
-    <div class="container">
-      <div class="about-inner">
-        <div class="about-visual">
-          <div class="about-card">
-            <div class="big-name">Geoff Griffith</div>
-            <div class="title">Network Engineer &amp; Founder</div>
-            <p class="bio">I've been building and troubleshooting networks long enough to know most problems aren't complicated — they're just not being handled by the right person. I do this locally, in person, as a one-person shop.</p>
-            <div class="tag-row">
-              <span class="tag">Network Design</span>
-              <span class="tag">Security</span>
-              <span class="tag">VLAN / Firewall</span>
-              <span class="tag">Managed Support</span>
-              <span class="tag">Leavenworth, KS</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-text">
-          <div class="section-label">About</div>
-          <h2>Local IT.<br><em>No Nonsense.</em></h2>
-          <p>I started this because local organizations were getting a bad deal — either cheap gear that falls apart or bloated MSP contracts with an 800 number nobody answers.</p>
-          <p>I'm not an MSP. I'm one person. I know your building, your team, and your budget. You deal with me directly, every time.</p>
-          <a href="about.html" class="ap-btn ap-btn--ghost" style="margin-top: 8px;">
-            More About Me
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- DOWNLOADS -->
   <section class="ap-section ap-section--alt" id="downloads">
@@ -892,23 +581,14 @@
     })();
   </script>
 
-  <!-- CTA -->
-  <section class="ap-section cta-section">
-    <div class="grid-bg"></div>
-    <div class="cta-glow"></div>
-    <div class="cta-inner">
-      <div class="section-label" style="justify-content:center;">Get in Touch</div>
-      <h2>Something broken?<br><em>Let's fix it.</em></h2>
-      <p>Tell me what you've got and what's not working. No pitch. No sales deck. Just a straight conversation about your setup.</p>
-      <div class="cta-actions">
-        <a href="consult.html" class="ap-btn ap-btn--primary">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Book a Free Consult
-        </a>
-        <a href="mailto:support@anchorpoint-it.com" class="ap-btn ap-btn--ghost">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email Me Directly
-        </a>
+  <!-- CONTACT -->
+  <section class="ap-section" id="contact">
+    <div class="container">
+      <h2>Want to talk?</h2>
+      <p style="font-size:0.96rem; color:var(--silver); max-width:480px; margin-bottom:32px; line-height:1.75;">Tell me what you've got. I'll be straight with you about what it needs.</p>
+      <div class="ap-hero-actions">
+        <a href="consult.html" class="ap-btn ap-btn--primary">Book a free consult</a>
+        <a href="mailto:support@anchorpoint-it.com" class="ap-btn ap-btn--ghost">Email me directly</a>
       </div>
     </div>
   </section>
