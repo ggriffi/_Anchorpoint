@@ -87,6 +87,218 @@
         <a href="about.html" class="ap-btn ap-btn--ghost">Who I Am</a>
       </div>
     </div>
+
+    <!-- Network topology diagram -->
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 460 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="nglow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="sglow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <!-- Packet paths -->
+          <path id="p-fw-core"   d="M230,55  L230,155"/>
+          <path id="p-core-swA"  d="M230,155 L110,248"/>
+          <path id="p-core-swB"  d="M230,155 L350,248"/>
+          <path id="p-swA-srv"   d="M110,248 L110,338"/>
+          <path id="p-swA-pc1"   d="M110,248 L52,338"/>
+          <path id="p-swA-pc2"   d="M110,248 L168,338"/>
+          <path id="p-swB-ap"    d="M350,248 L350,338"/>
+          <path id="p-swB-pc3"   d="M350,248 L292,338"/>
+          <path id="p-swB-cam"   d="M350,248 L408,338"/>
+        </defs>
+
+        <!-- ── BACKBONE LINES ── -->
+        <line x1="230" y1="55"  x2="230" y2="155" stroke="url(#lg1)" stroke-width="2"/>
+        <line x1="230" y1="155" x2="110" y2="248" stroke="rgba(46,143,255,0.35)" stroke-width="1.5"/>
+        <line x1="230" y1="155" x2="350" y2="248" stroke="rgba(46,143,255,0.35)" stroke-width="1.5"/>
+        <!-- Left branch -->
+        <line x1="110" y1="248" x2="52"  y2="338" stroke="rgba(46,143,255,0.22)" stroke-width="1"/>
+        <line x1="110" y1="248" x2="110" y2="338" stroke="rgba(46,143,255,0.22)" stroke-width="1"/>
+        <line x1="110" y1="248" x2="168" y2="338" stroke="rgba(46,143,255,0.22)" stroke-width="1"/>
+        <!-- Right branch -->
+        <line x1="350" y1="248" x2="292" y2="338" stroke="rgba(46,143,255,0.22)" stroke-width="1"/>
+        <line x1="350" y1="248" x2="350" y2="338" stroke="rgba(46,143,255,0.22)" stroke-width="1"/>
+        <line x1="350" y1="248" x2="408" y2="338" stroke="rgba(46,143,255,0.22)" stroke-width="1"/>
+
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(0,212,255,0.7)"/>
+            <stop offset="100%" stop-color="rgba(46,143,255,0.4)"/>
+          </linearGradient>
+        </defs>
+
+        <!-- ── VLAN LABELS ── -->
+        <text x="155" y="208" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(46,143,255,0.35)" transform="rotate(-32,155,208)">VLAN 10</text>
+        <text x="305" y="208" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(46,143,255,0.35)" transform="rotate(32,305,208)">VLAN 20</text>
+
+        <!-- ── FIREWALL NODE ── -->
+        <g transform="translate(230,55)" filter="url(#nglow)">
+          <circle cx="0" cy="0" r="22" fill="none" stroke="rgba(255,145,0,0.18)" stroke-width="1">
+            <animate attributeName="r" values="22;32;22" dur="2.8s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;0;0.5" dur="2.8s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="0" cy="0" r="22" fill="rgba(255,120,0,0.07)" stroke="rgba(255,140,0,0.55)" stroke-width="1.5"/>
+          <path d="M0,-11 L9,-7 L9,1 C9,8 0,13 0,13 C0,13 -9,8 -9,1 L-9,-7 Z" stroke="rgba(255,160,0,0.85)" stroke-width="1.3" stroke-linejoin="round"/>
+          <text x="0" y="31" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7.5" fill="rgba(255,150,0,0.7)">FIREWALL</text>
+        </g>
+        <!-- Status dot -->
+        <circle cx="246" cy="38" r="3.5" fill="rgba(255,140,0,0.9)" filter="url(#sglow)">
+          <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- ── CORE SWITCH NODE ── -->
+        <g transform="translate(230,155)" filter="url(#nglow)">
+          <circle cx="0" cy="0" r="19" fill="none" stroke="rgba(0,212,255,0.12)" stroke-width="1">
+            <animate attributeName="r" values="19;28;19" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.35;0;0.35" dur="4s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="0" cy="0" r="19" fill="rgba(0,212,255,0.07)" stroke="rgba(0,212,255,0.6)" stroke-width="1.5"/>
+          <rect x="-10" y="-5.5" width="20" height="11" rx="2" stroke="rgba(0,212,255,0.85)" stroke-width="1.2"/>
+          <circle cx="-5.5" cy="0" r="1.3" fill="rgba(0,212,255,0.85)"/>
+          <circle cx="-1.5" cy="0" r="1.3" fill="rgba(0,212,255,0.85)"/>
+          <circle cx="2.5"  cy="0" r="1.3" fill="rgba(0,212,255,0.85)"/>
+          <circle cx="6.5"  cy="0" r="1.3" fill="rgba(0,212,255,0.85)"/>
+          <text x="0" y="28" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(0,212,255,0.65)">CORE SW</text>
+        </g>
+        <circle cx="247" cy="139" r="3" fill="rgba(0,229,160,0.9)" filter="url(#sglow)">
+          <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- ── SWITCH A ── -->
+        <g transform="translate(110,248)" filter="url(#sglow)">
+          <circle cx="0" cy="0" r="16" fill="rgba(46,143,255,0.07)" stroke="rgba(46,143,255,0.55)" stroke-width="1.3"/>
+          <rect x="-8.5" y="-4.5" width="17" height="9" rx="1.5" stroke="rgba(46,143,255,0.8)" stroke-width="1.1"/>
+          <circle cx="-4"  cy="0" r="1.1" fill="rgba(46,143,255,0.8)"/>
+          <circle cx="0"   cy="0" r="1.1" fill="rgba(46,143,255,0.8)"/>
+          <circle cx="4"   cy="0" r="1.1" fill="rgba(46,143,255,0.8)"/>
+          <text x="0" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(46,143,255,0.6)">SW-A</text>
+        </g>
+        <circle cx="123" cy="235" r="2.5" fill="rgba(0,229,160,0.8)">
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.6s" repeatCount="indefinite" begin="0.4s"/>
+        </circle>
+
+        <!-- ── SWITCH B ── -->
+        <g transform="translate(350,248)" filter="url(#sglow)">
+          <circle cx="0" cy="0" r="16" fill="rgba(46,143,255,0.07)" stroke="rgba(46,143,255,0.55)" stroke-width="1.3"/>
+          <rect x="-8.5" y="-4.5" width="17" height="9" rx="1.5" stroke="rgba(46,143,255,0.8)" stroke-width="1.1"/>
+          <circle cx="-4"  cy="0" r="1.1" fill="rgba(46,143,255,0.8)"/>
+          <circle cx="0"   cy="0" r="1.1" fill="rgba(46,143,255,0.8)"/>
+          <circle cx="4"   cy="0" r="1.1" fill="rgba(46,143,255,0.8)"/>
+          <text x="0" y="24" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(46,143,255,0.6)">SW-B</text>
+        </g>
+        <circle cx="363" cy="235" r="2.5" fill="rgba(0,229,160,0.8)">
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.6s" repeatCount="indefinite" begin="0.9s"/>
+        </circle>
+
+        <!-- ── END NODES — LEFT GROUP ── -->
+        <!-- PC -->
+        <g transform="translate(52,338)">
+          <circle cx="0" cy="0" r="13" fill="rgba(46,143,255,0.05)" stroke="rgba(46,143,255,0.38)" stroke-width="1"/>
+          <rect x="-6.5" y="-5" width="13" height="9" rx="1" stroke="rgba(46,143,255,0.65)" stroke-width="1"/>
+          <line x1="-3.5" y1="4" x2="3.5" y2="4" stroke="rgba(46,143,255,0.65)" stroke-width="1.1"/>
+          <text x="0" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="rgba(46,143,255,0.5)">PC</text>
+        </g>
+        <!-- Server -->
+        <g transform="translate(110,338)">
+          <circle cx="0" cy="0" r="13" fill="rgba(0,229,160,0.05)" stroke="rgba(0,229,160,0.45)" stroke-width="1"/>
+          <rect x="-7" y="-7" width="14" height="14" rx="1.5" stroke="rgba(0,229,160,0.7)" stroke-width="1"/>
+          <line x1="-4" y1="-2" x2="4" y2="-2" stroke="rgba(0,229,160,0.55)" stroke-width="0.9"/>
+          <line x1="-4" y1="1"  x2="4" y2="1"  stroke="rgba(0,229,160,0.55)" stroke-width="0.9"/>
+          <circle cx="4.5" cy="-4" r="1" fill="rgba(0,229,160,0.7)">
+            <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.5s" repeatCount="indefinite"/>
+          </circle>
+          <text x="0" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="rgba(0,229,160,0.5)">SRV</text>
+        </g>
+        <!-- PC -->
+        <g transform="translate(168,338)">
+          <circle cx="0" cy="0" r="13" fill="rgba(46,143,255,0.05)" stroke="rgba(46,143,255,0.38)" stroke-width="1"/>
+          <rect x="-6.5" y="-5" width="13" height="9" rx="1" stroke="rgba(46,143,255,0.65)" stroke-width="1"/>
+          <line x1="-3.5" y1="4" x2="3.5" y2="4" stroke="rgba(46,143,255,0.65)" stroke-width="1.1"/>
+          <text x="0" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="rgba(46,143,255,0.5)">PC</text>
+        </g>
+
+        <!-- ── END NODES — RIGHT GROUP ── -->
+        <!-- PC -->
+        <g transform="translate(292,338)">
+          <circle cx="0" cy="0" r="13" fill="rgba(46,143,255,0.05)" stroke="rgba(46,143,255,0.38)" stroke-width="1"/>
+          <rect x="-6.5" y="-5" width="13" height="9" rx="1" stroke="rgba(46,143,255,0.65)" stroke-width="1"/>
+          <line x1="-3.5" y1="4" x2="3.5" y2="4" stroke="rgba(46,143,255,0.65)" stroke-width="1.1"/>
+          <text x="0" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="rgba(46,143,255,0.5)">PC</text>
+        </g>
+        <!-- Wi-Fi AP -->
+        <g transform="translate(350,338)">
+          <circle cx="0" cy="0" r="13" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.48)" stroke-width="1"/>
+          <path d="M-7,-3 A8,8 0 0,1 7,-3"   fill="none" stroke="rgba(0,212,255,0.75)" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M-4,1  A5,5 0 0,1 4,1"    fill="none" stroke="rgba(0,212,255,0.75)" stroke-width="1.3" stroke-linecap="round"/>
+          <circle cx="0" cy="5" r="1.5" fill="rgba(0,212,255,0.85)"/>
+          <text x="0" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="rgba(0,212,255,0.5)">AP</text>
+        </g>
+        <!-- Camera -->
+        <g transform="translate(408,338)">
+          <circle cx="0" cy="0" r="13" fill="rgba(46,143,255,0.05)" stroke="rgba(46,143,255,0.35)" stroke-width="1"/>
+          <rect x="-7" y="-4.5" width="11" height="9" rx="1.5" stroke="rgba(46,143,255,0.62)" stroke-width="1"/>
+          <path d="M4,-1.5 L7.5,-3.5 L7.5,3.5 L4,1.5 Z" fill="rgba(46,143,255,0.62)"/>
+          <text x="0" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" fill="rgba(46,143,255,0.5)">CAM</text>
+        </g>
+
+        <!-- ── ANIMATED DATA PACKETS ── -->
+        <!-- FW → Core (two staggered) -->
+        <circle r="2.8" fill="#00d4ff" filter="url(#sglow)">
+          <animateMotion dur="1.6s" repeatCount="indefinite" begin="0s"><mpath href="#p-fw-core"/></animateMotion>
+          <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.92;1" dur="1.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="2" fill="#2e8fff">
+          <animateMotion dur="1.6s" repeatCount="indefinite" begin="0.8s"><mpath href="#p-fw-core"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.05;0.92;1" dur="1.6s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Core → SW-A -->
+        <circle r="2.2" fill="#00d4ff" filter="url(#sglow)">
+          <animateMotion dur="1.9s" repeatCount="indefinite" begin="0.3s"><mpath href="#p-core-swA"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.06;0.92;1" dur="1.9s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Core → SW-B -->
+        <circle r="2.2" fill="#00d4ff" filter="url(#sglow)">
+          <animateMotion dur="1.9s" repeatCount="indefinite" begin="0.75s"><mpath href="#p-core-swB"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" keyTimes="0;0.06;0.92;1" dur="1.9s" repeatCount="indefinite"/>
+        </circle>
+        <!-- SW-A → SRV -->
+        <circle r="1.8" fill="#00e5a0">
+          <animateMotion dur="1.4s" repeatCount="indefinite" begin="0.5s"><mpath href="#p-swA-srv"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.08;0.9;1" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- SW-A → PC1 -->
+        <circle r="1.5" fill="#2e8fff">
+          <animateMotion dur="1.4s" repeatCount="indefinite" begin="1.1s"><mpath href="#p-swA-pc1"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.08;0.9;1" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- SW-B → AP -->
+        <circle r="1.8" fill="#00d4ff">
+          <animateMotion dur="1.4s" repeatCount="indefinite" begin="0.9s"><mpath href="#p-swB-ap"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.08;0.9;1" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- SW-B → PC3 -->
+        <circle r="1.5" fill="#2e8fff">
+          <animateMotion dur="1.4s" repeatCount="indefinite" begin="1.4s"><mpath href="#p-swB-pc3"/></animateMotion>
+          <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.08;0.9;1" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- ── STATUS BAR ── -->
+        <g transform="translate(0,400)">
+          <rect x="55" y="0" width="350" height="17" rx="3" fill="rgba(46,143,255,0.04)" stroke="rgba(46,143,255,0.14)" stroke-width="0.5"/>
+          <circle cx="74" cy="8.5" r="3.2" fill="rgba(0,229,160,0.85)" filter="url(#sglow)">
+            <animate attributeName="opacity" values="0.85;0.3;0.85" dur="2.4s" repeatCount="indefinite"/>
+          </circle>
+          <text x="84" y="13" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(0,229,160,0.65)">ALL SYSTEMS NOMINAL</text>
+          <text x="320" y="13" font-family="JetBrains Mono,monospace" font-size="7" fill="rgba(46,143,255,0.38)">8 NODES ONLINE</text>
+        </g>
+      </svg>
+    </div>
+
   </section>
 
   <!-- WHAT I DO -->
