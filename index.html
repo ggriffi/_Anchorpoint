@@ -75,9 +75,10 @@
   <section class="ap-hero-section ap-hero--slim">
     <div class="grid-bg"></div>
     <div class="hero-glow"></div>
+    <div class="scan-line"></div>
     <div class="ap-hero-content">
       <div class="hero-eyebrow fade-up">
-        geoff@anchorpoint-it &middot; Leavenworth, KS<span class="cursor"></span>
+        <span class="eyebrow-type" data-text="geoff@anchorpoint-it · Leavenworth, KS"></span><span class="cursor"></span>
       </div>
       <h1 class="ap-h1 fade-up delay-1">I fix networks.<br><em>Build them right.</em><br>Stay local.</h1>
       <p class="ap-hero-sub fade-up delay-2">I handle IT for small businesses, churches, and nonprofits in Leavenworth, KS. One person — no call center, no ticket queue. I show up in person and I answer when you call.</p>
@@ -91,9 +92,9 @@
   <!-- WHAT I DO -->
   <section class="ap-section" id="services">
     <div class="container">
-      <h2>What I do</h2>
+      <h2 class="reveal">What I do</h2>
       <div class="work-areas">
-        <div class="work-area">
+        <div class="work-area reveal stagger-1">
           <h3>Networks</h3>
           <p>Your network is either working or it isn't. I build them so they do — VLANs, whole-building Wi-Fi, switching and routing done properly. Not patched together, not consumer gear that falls over.</p>
           <ul class="work-list">
@@ -102,7 +103,7 @@
             <li>Switching and routing done right the first time</li>
           </ul>
         </div>
-        <div class="work-area">
+        <div class="work-area reveal stagger-2">
           <h3>Security</h3>
           <p>I build security in from the start — not something you bolt on after something goes wrong. If your network has gaps, I'll find them before someone else does.</p>
           <ul class="work-list">
@@ -111,7 +112,7 @@
             <li>Monitoring so you're not flying blind</li>
           </ul>
         </div>
-        <div class="work-area">
+        <div class="work-area reveal stagger-3">
           <h3>IT Support</h3>
           <p>Something breaks — you call me. Not a ticket system, not a bot. Me. I know your setup and I'm not starting from scratch every time.</p>
           <ul class="work-list">
@@ -121,7 +122,7 @@
           </ul>
         </div>
       </div>
-      <div class="work-areas-footer">
+      <div class="work-areas-footer reveal stagger-4">
         <a href="services.html" class="ap-btn ap-btn--ghost">Full breakdown of services</a>
       </div>
     </div>
@@ -130,9 +131,9 @@
   <!-- SOME WORK I'VE DONE -->
   <section class="ap-section ap-section--alt" id="work">
     <div class="container">
-      <h2>Some work<br><em>I've done</em></h2>
+      <h2 class="reveal">Some work<br><em>I've done</em></h2>
       <div class="stories">
-        <a href="blog.html" class="story fade-up">
+        <a href="blog.html" class="story reveal">
           <div class="story-meta">Network &middot; Church</div>
           <div class="story-body">
             <h3>500-person church, one consumer router</h3>
@@ -140,7 +141,7 @@
           </div>
           <span class="story-link">Read →</span>
         </a>
-        <a href="blog.html" class="story fade-up delay-1">
+        <a href="blog.html" class="story reveal stagger-1">
           <div class="story-meta">Security &middot; Nonprofit</div>
           <div class="story-body">
             <h3>Every device on one flat network</h3>
@@ -148,7 +149,7 @@
           </div>
           <span class="story-link">Read →</span>
         </a>
-        <a href="blog.html" class="story fade-up delay-2">
+        <a href="blog.html" class="story reveal stagger-2">
           <div class="story-meta">Tools &middot; Dev</div>
           <div class="story-body">
             <h3>Built a network analysis tool from scratch</h3>
@@ -156,7 +157,7 @@
           </div>
           <span class="story-link">Read →</span>
         </a>
-        <a href="https://kingdomkidssafari.com" target="_blank" rel="noopener noreferrer" class="story fade-up delay-3">
+        <a href="https://kingdomkidssafari.com" target="_blank" rel="noopener noreferrer" class="story reveal stagger-3">
           <div class="story-meta">Web Design</div>
           <div class="story-body">
             <h3>Kingdom Kids Safari</h3>
@@ -171,7 +172,7 @@
   <!-- WHO I AM -->
   <section class="ap-section personal-section" id="about-preview">
     <div class="container">
-      <div class="personal-inner">
+      <div class="personal-inner reveal">
         <p class="personal-lead">I started this because local organizations were getting a bad deal.</p>
         <p>Either cheap gear that falls apart, or bloated MSP contracts with an 800 number nobody answers. Good organizations stuck with bad setups that nobody was fixing.</p>
         <p>I'm not an MSP. I'm one person. I know your building, your team, and your constraints. You deal with me directly, every time — and I'm still around after the job's done.</p>
@@ -333,7 +334,7 @@
 
       <div class="download-grid">
 
-        <div class="download-card">
+        <div class="download-card reveal stagger-1">
           <div class="download-card-header">
             <div class="download-os-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -361,7 +362,7 @@
           </a>
         </div>
 
-        <div class="download-card">
+        <div class="download-card reveal stagger-2">
           <div class="download-card-header">
             <div class="download-os-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -584,14 +585,16 @@
   <!-- CONTACT -->
   <section class="ap-section" id="contact">
     <div class="container">
-      <h2>Want to talk?</h2>
-      <p style="font-size:0.96rem; color:var(--silver); max-width:480px; margin-bottom:32px; line-height:1.75;">Tell me what you've got. I'll be straight with you about what it needs.</p>
-      <div class="ap-hero-actions">
+      <h2 class="reveal">Want to talk?</h2>
+      <p class="reveal stagger-1" style="font-size:0.96rem; color:var(--silver); max-width:480px; margin-bottom:32px; line-height:1.75;">Tell me what you've got. I'll be straight with you about what it needs.</p>
+      <div class="ap-hero-actions reveal stagger-2">
         <a href="consult.html" class="ap-btn ap-btn--primary">Book a free consult</a>
         <a href="mailto:support@anchorpoint-it.com" class="ap-btn ap-btn--ghost">Email me directly</a>
       </div>
     </div>
   </section>
+
+  <script src="js/site.js"></script>
 
   <footer class="site-footer">
   <div class="footer-inner">
