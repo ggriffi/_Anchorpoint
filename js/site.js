@@ -51,22 +51,6 @@ function setActiveNav() {
   els.forEach(el => observer.observe(el));
 })();
 
-/* ── HERO EYEBROW TYPEWRITER ──────────────────────────── */
-(function() {
-  const el = document.querySelector('.eyebrow-type');
-  if (!el) return;
-  const text = el.dataset.text || '';
-  let i = 0;
-  function type() {
-    el.textContent = text.slice(0, i);
-    if (i < text.length) {
-      i++;
-      setTimeout(type, i === 1 ? 700 : 38 + Math.random() * 22);
-    }
-  }
-  type();
-})();
-
 /* ── HERO PARALLAX (grid only — lets glow CSS animation run) */
 (function() {
   const grid = document.querySelector('.ap-hero-section .grid-bg');
@@ -74,11 +58,4 @@ function setActiveNav() {
   window.addEventListener('scroll', function() {
     grid.style.transform = 'translateY(' + (window.scrollY * 0.07) + 'px)';
   }, { passive: true });
-})();
-
-/* ── H1 GLITCH (fires after hero entrance finishes) ───── */
-(function() {
-  const h1 = document.querySelector('.ap-h1');
-  if (!h1) return;
-  setTimeout(() => h1.classList.add('do-glitch'), 1400);
 })();
